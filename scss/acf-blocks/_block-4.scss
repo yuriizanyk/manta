@@ -1,0 +1,99 @@
+.wcl-block-4 {
+    padding-top: 74px;
+    padding-bottom: 103px;
+
+    &.mod-blue {
+        background-color: $c-blue;
+    }
+
+    &.mod-orange {
+        background-color: $c-orange;
+    }
+
+    .data {
+        &-title {
+            font-family: $f-moranga;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 37px;
+            text-align: center;
+            color: #214752;
+            margin-bottom: 34px;
+        }
+
+        &-container {
+            max-width: 1530px;
+        }
+
+        &-list {
+            display: flex;
+            margin: 0 -58px;
+        }
+
+        &-item {
+            width: 33.33%;
+            padding: 0 58px;
+
+            &-inner {
+                text-align: center;
+                max-width: 406px;
+                margin: 0 auto;
+            }
+
+            &-img {
+                margin-bottom: 15px;
+                height: 208px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &-inner {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                img {
+                    max-height: 208px;
+                    object-fit: contain;
+                }
+            }
+
+            &-index {
+                background-color: #F5F2F0;
+                width: 90px;
+                height: 90px;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #214752;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 115%;
+                position: absolute;
+                right: -43px;
+                bottom: -38px;
+                filter: drop-shadow(0px 2px 4px rgba(0, 13, 76, 0.10));
+            }
+
+            &-title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28px;
+                margin-bottom: 18px;
+                position: relative;
+                left: -6px;
+            }
+
+            &-text {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25px;
+                min-height: 63px;
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+    }
+}

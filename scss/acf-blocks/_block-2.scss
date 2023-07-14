@@ -1,0 +1,60 @@
+.wcl-block-2 {
+    padding-top: 58px;
+    background-color: #214752;
+    color: $c-white-2;
+
+    .data {
+        &-container {
+            max-width: 1557px;
+
+            &.mod-two{
+                position: relative;
+                left: -93px;
+            }
+        }
+
+        &-row {
+            display: flex;
+            margin: 0 -38px;
+            align-items: flex-end;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 38px;
+
+            &:first-child {
+                width: 45%;
+            }
+
+            &:nth-child(2) {
+                margin-bottom: 93px;
+                width: 55%;
+            }
+        }
+
+        &-title {
+            font-family: $f-moranga;
+            font-size: 83px;
+            font-weight: 400;
+            line-height: 95px;
+            text-align: center;
+            margin-bottom: 23px;
+
+            code {
+                font-weight: 900;
+            }
+        }
+
+        &-text {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 30px;
+            margin-top: 53px;
+        }
+
+        &-img {
+            max-width: 621px;
+        }
+    }
+}

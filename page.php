@@ -9,7 +9,6 @@ get_header();
 <main id="wcl-page-content" class="wcl-page-content">
 
     <?php
-    /*
     if (have_rows('page_content')) {
         while (have_rows('page_content')) { the_row();
 
@@ -24,11 +23,7 @@ get_header();
         if (have_posts()) {
             while (have_posts()) { the_post(); ?>
                 <div class="wcl-page">
-                    <div class="container">
-                        <h1 class="data-title">
-                            <?php the_title(); ?>
-                        </h1>
-
+                    <div class="data-container">
                         <div class="data-content">
                             <?php the_content(); ?>
                         </div>
@@ -38,8 +33,6 @@ get_header();
             }
         }
     }
-    ?>
-    */
     ?>
 
 </main> <!-- #wcl-page-content -->

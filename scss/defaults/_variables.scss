@@ -1,54 +1,99 @@
 
-/* 
-==============================================
-    CONTENT OF THE FILE
-==============================================
-
-    1. Fonts
-    2. Variables
-
-*/
-
-
-
 
 
 /* 
-* 1. Fonts
+* 1. Variables
 */
 
-/*
+$c-white: #fff;
+$c-black: #000;
+
+$c-white-2: #F5F2F0;
+$c-black-2: #0F2E33;
+$c-orange: #FF6B61;
+$c-blue: #D6E8EB;
+
+$f-red-hat-display: 'Red Hat Display', sans-serif;
+$f-abhaya-libre: 'Abhaya Libre', sans-serif;
+$f-moranga: 'Moranga', sans-serif;
+
+
+
+
+/* 
+* 2. Fonts
+*/
+
+
 @font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Regular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'Red Hat Display';
+    src: url('../fonts/RedHatDisplay-Medium.woff2') format('woff2');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Gilroy Italic';
-    src: url('../fonts/Gilroy-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
+    font-family: 'Red Hat Display';
+    src: url('../fonts/RedHatDisplay-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
     font-display: swap;
 }
 
-$gilroy: 'Gilroy', sans-serif;
-$gilroy_italic: 'Gilroy Italic', sans-serif;
+@font-face {
+    font-family: 'Abhaya Libre';
+    src: url('../fonts/AbhayaLibre-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 
-*/
+@font-face {
+    font-family: 'Abhaya Libre';
+    src: url('../fonts/AbhayaLibre-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('../fonts/RedHatDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Moranga';
+    src: url('../fonts/Moranga-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Moranga';
+    src: url('../fonts/Moranga-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Moranga';
+    src: url('../fonts/Moranga-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Moranga';
+    src: url('../fonts/Moranga-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* 
-* 2. Variables
-*/
-
-/*
-$white: #fff;
-$black: #000;
-*/

@@ -4,7 +4,23 @@
 @import 'defaults/variables';
 @import 'defaults/general';
 @import 'defaults/ui-elements';
+@import 'defaults/icons';
 
 
 // Sections
-@import 'sections/banner';
+@import 'sections/header';
+@import 'sections/footer';
+
+
+// ACF Blocks
+@import 'acf-blocks/block-1';
+@import 'acf-blocks/block-2';
+@import 'acf-blocks/block-3';
+@import 'acf-blocks/block-4';
+@import 'acf-blocks/block-5';
+@import 'acf-blocks/block-6';
+@import 'acf-blocks/block-7';
+@import 'acf-blocks/block-8';
+@import 'acf-blocks/block-9';
+@import 'acf-blocks/block-10';
+@import 'acf-blocks/block-11';

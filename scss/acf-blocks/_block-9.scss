@@ -1,0 +1,96 @@
+.wcl-block-9 {
+    position: relative;
+    background-color: #D6E8EB;
+    padding-top: 96px;
+    padding-bottom: 68px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 500px;
+        background: linear-gradient(180deg, #F5F2F0 16.15%, #D6E8EB 100%);
+    }
+
+    .data {
+        &-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1700px;
+        }
+
+        &-title {
+            color: #214752;
+            font-family: $f-moranga;
+            font-size: 83px;
+            font-weight: 400;
+            line-height: 95px;
+            text-align: center;
+            max-width: 1358px;
+            margin: 0 auto;
+            margin-bottom: 87px;
+            position: relative;
+            left: -63px;
+
+            strong {
+                font-weight: 900;
+            }
+        }
+
+        &-line {
+            background-color: #214752;
+            height: 1px;
+            max-width: 596px;
+            margin: 0 auto;
+            margin-bottom: 86px;
+            position: relative;
+            left: -23px;
+        }
+
+        &-row {
+            display: flex;
+            margin: 0 -25px;
+        }
+
+        &-col {
+            width: 50%;
+            padding: 0 25px;
+
+            &:first-child {
+                margin-top: 113px;
+            }
+
+            &:nth-child(2) {
+                width: 53.1%;
+                flex-shrink: 0;
+            }
+        }
+
+        &-a {
+            &-title {
+                color: #0F2E33;
+                font-family: $f-moranga;
+                font-size: 36.3px;
+                font-weight: 400;
+                line-height: 50px;
+                margin-bottom: 29px;
+            }
+
+            &-text {
+                color: #0F2E33;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                max-width: 578px;
+            }
+        }
+
+        &-img {
+            position: relative;
+            left: 59px;
+            max-width: 836px;
+        }
+    }
+}

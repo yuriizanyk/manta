@@ -1,0 +1,122 @@
+.wcl-block-7 {
+    padding-top: 76px;
+    padding-bottom: 115px;
+    background-color: #F5F2F0;
+
+    .data {
+        &-container{
+            max-width: 1680px;
+        }
+        &-title {
+            font-family: $f-moranga;
+            color: #214752;
+            font-size: 32px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 33px;
+            position: relative;
+            left: -9px;
+        }
+
+        &-text {
+            color: #214752;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: center;
+            max-width: 1185px;
+            margin: 0 auto;
+            position: relative;
+            left: -9px;
+
+            a {
+                color: #214752;
+            }
+
+            p {
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 52px;
+            margin: 0 -80px;
+            margin-top: 94px;
+        }
+
+        &-item {
+            padding: 0 40px;
+            width: 25%;
+
+            &-inner {
+                text-align: center;
+            }
+
+            &-title {
+                font-size: 24px;
+                color: #214752;
+                font-weight: 700;
+                line-height: 28px;
+                margin-bottom: 31px;
+
+                a {
+                    color: #214752;
+                    padding-bottom: 2px;
+                    display: inline-block;
+                    position: relative;
+
+                    &:hover {
+                        color: $c-orange;
+                        text-decoration: none;
+                    }
+
+                    // &::after {
+                    //     content: '';
+                    //     position: absolute;
+                    //     bottom: 0;
+                    //     width: 100%;
+                    //     height: 1px;
+                    //     background-color: #214752;
+                    //     left: 50%;
+                    //     transform: translateX(-50%);
+                    //     transition: all 0.25s ease;
+                    // }
+                }
+            }
+
+            &-text {
+                color: #214752;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25px;
+                text-align: center;
+            }
+
+            &-icon {
+                width: 161px;
+                height: 161px;
+                margin: 0 auto;
+                border-radius: 100%;
+                background-color: $c-white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 67px;
+                margin-bottom: 31px;
+
+                img {
+                    max-width: calc(100% - 20px);
+                    max-height: calc(100% - 20px);
+                    width: auto;
+                }
+            }
+        }
+    }
+}

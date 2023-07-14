@@ -1,0 +1,40 @@
+.wcl-block-11 {
+    border-radius: 5px;
+    background: #214752;
+    padding: 35px 32px 51px;
+    text-align: center;
+
+    .b11 {
+        &-title {
+            color: #FFF;
+            font-family: $f-moranga;
+            font-size: 27px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            line-height: 125%;
+        }
+
+        &-subtitle {
+            color: #FFF;
+            font-size: 17px;
+            line-height: 130%;
+            margin-bottom: 23px;
+            font-weight: normal;
+        }
+
+        &-link {
+            a {
+                display: inline-flex !important;
+                color: $c-white;
+                font-size: 16px;
+                height: 41px;
+                padding: 5px 20px;
+                border-radius: 5px;
+
+                &:hover {
+                    color: $c-orange;
+                }
+            }
+        }
+    }
+}

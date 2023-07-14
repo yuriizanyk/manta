@@ -1,48 +1,29 @@
-
-/* 
-==============================================
-    CONTENT OF THE FILE
-==============================================
-
-    1. Buttons
-    2. Form Elements
-    ...
-
-*/
-
-
-
-/* 
-* 1. Buttons
-*/
-.wcl-button-wrapper {
-
-    .wcl-button {
-        display: inline-block; 
-        cursor: pointer;
-        outline: 0;
-        -webkit-transition: all .25s ease-in-out;
-        -o-transition: all .25s ease-in-out;
-        transition: all .25s ease-in-out;
-    }
-
+.wcl-link{
+    
 }
 
 
-
-
-
 /* 
-* 2. Form Elements
-*/
-.wcl-form-wrapper {
+wcl-button
+ */
+.wcl-button {
+    display: inline-flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    padding: 3px 31px;
+    background-color: #FF6B61;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #F5F2F0;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid transparent;
 
-    input {
-
+    &:hover {
+        background-color: transparent;
+        color: $c-orange;
+        border-color: $c-orange;
     }
-
-    textarea {
-        
-    }
-
 }

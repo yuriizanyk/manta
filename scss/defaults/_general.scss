@@ -1,23 +1,27 @@
 * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: $f-red-hat-display;
     font-size: 16px;
     line-height: 1.4;
     overflow-x: hidden;
+    color: $c-black-2;
 }
+
 html.overflow-hidden,
 body.overflow-hidden {
     overflow: hidden;
 }
+
 img,
 svg {
     max-width: 100%;
     height: auto;
 }
+
 iframe {
     max-width: 100%;
 }
@@ -25,8 +29,9 @@ iframe {
 p,
 ul,
 ol {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
+
 p:last-child {
     margin-bottom: 0;
 }
@@ -37,9 +42,9 @@ textarea {
 }
 
 a {
-    -webkit-transition: all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
 }
 
 .wcl-body-inner {
@@ -60,11 +65,11 @@ a {
 
 .wcl-container {
     width: 100%;
-    // max-width: 1280px;
+    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    // padding-left: 40px;
-    // padding-right: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 
@@ -75,33 +80,50 @@ a {
 
 
 
-h1, .wcl-h1,
-h2, .wcl-h2,
-h3, .wcl-h3,
-h4, .wcl-h4,
-h5, .wcl-h5,
-h6, .wcl-h6 {
+h1,
+.wcl-h1,
+h2,
+.wcl-h2,
+h3,
+.wcl-h3,
+h4,
+.wcl-h4,
+h5,
+.wcl-h5,
+h6,
+.wcl-h6 {
     font-weight: bold;
     line-height: 1.5;
-    margin-top: 40px;
     margin-bottom: 20px;
 }
-h1, .wcl-h1 {
+
+h1,
+.wcl-h1 {
     font-size: 42px;
 }
-h2, .wcl-h2 {
+
+h2,
+.wcl-h2 {
     font-size: 34px;
 }
-h3, .wcl-h3 {
+
+h3,
+.wcl-h3 {
     font-size: 30px;
 }
-h4, .wcl-h4 {
+
+h4,
+.wcl-h4 {
     font-size: 28px;
 }
-h5, .wcl-h5 {
+
+h5,
+.wcl-h5 {
     font-size: 24px;
 }
-h6, .wcl-h6 {
+
+h6,
+.wcl-h6 {
     font-size: 22px;
 }
 
@@ -110,36 +132,58 @@ h6, .wcl-h6 {
 
 strong,
 b {
-    font-weight: bold;
+    font-weight: 700;
 }
+
 em {
     font-style: italic;
 }
+
 a {
-    // STYLES OF ALL LINKS GOES HERE
+    color: $c-black-2;
+
+    &:focus{
+        outline: none;
+    }
 }
+
 ul {
     list-style: disc;
 }
+
 ol {
     list-style: decimal;
 }
-ul, ol {
+
+ul,
+ol {
     padding-left: 20px;
 }
 
 
 
-
+@media (max-width: 1360px) {
+    .wcl-body-inner {
+        padding-top: 98px;
+    }
+}
 
 /*
 * Responsive Design
 */
 @media only screen and (max-width: 768px) {
-    
+
     .wcl-container {
         // padding-left: 20px;
         // padding-right: 20px;
     }
 
+}
+
+
+@media (max-width: 280px) {
+    html {
+        min-width: 280px;
+        overflow-x: auto;
+    }
 }
