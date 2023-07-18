@@ -23,14 +23,22 @@ $group_2 = get_field('group_2');
                     $link    = $group_1['link'];
                     $image   = wp_get_attachment_image($image, 'image-size-3');
 
-                    $color_picker     = get_field('color_picker');
-                    $color_picker     = !empty($color_picker) ? $color_picker : '#214752';
-                    $custom_color_tag = '';
-                    $custom_color_tag = 'style="background-color: ' . $color_picker . ';"';
+                    $enable_custom_color = $group_1['enable_custom_color'];
+                    $color_picker        = $group_1['color_picker'];
+                    $color_picker        = !empty($color_picker) ? $color_picker : '#214752';
+
+                    $bg_gradient_for_image = $group_1['bg_gradient_for_image'];
+
+                    $color_tag = '';
+                    $color_tag = 'style="background: ' . $bg_gradient_for_image . ';"';
+
+                    if (!empty($enable_custom_color)) {
+                        $color_tag = 'style="background: ' . $color_picker . ';"';
+                    }
                     ?>
                     <div class="data-a">
                         <?php if (!empty($image)) : ?>
-                            <div class="data-a-img">
+                            <div class="data-a-img" <?php echo $color_tag; ?>>
                                 <?php echo $image; ?>
                             </div>
                         <?php endif; ?>
@@ -52,14 +60,22 @@ $group_2 = get_field('group_2');
                     $link    = $group_2['link'];
                     $image   = wp_get_attachment_image($image, 'image-size-3');
 
-                    $color_picker     = get_field('color_picker');
-                    $color_picker     = !empty($color_picker) ? $color_picker : '#214752';
-                    $custom_color_tag = '';
-                    $custom_color_tag = 'style="color: ' . $color_picker . ';"';
+                    $enable_custom_color = $group_2['enable_custom_color'];
+                    $color_picker        = $group_2['color_picker'];
+                    $color_picker        = !empty($color_picker) ? $color_picker : '#FF6B61';
+
+                    $bg_gradient_for_image = $group_2['bg_gradient_for_image'];
+
+                    $color_tag = '';
+                    $color_tag = 'style="background: ' . $bg_gradient_for_image . ';"';
+
+                    if (!empty($enable_custom_color)) {
+                        $color_tag = 'style="background: ' . $color_picker . ';"';
+                    }
                     ?>
                     <div class="data-a mod-orange">
                         <?php if (!empty($image)) : ?>
-                            <div class="data-a-img">
+                            <div class="data-a-img" <?php echo $color_tag; ?>>
                                 <?php echo $image; ?>
                             </div>
                         <?php endif; ?>
