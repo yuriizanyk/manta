@@ -2,12 +2,13 @@
     padding-top: 58px;
     background-color: #214752;
     color: $c-white-2;
+    padding-right: 29px;
 
     .data {
         &-container {
             max-width: 1557px;
 
-            &.mod-two{
+            &.mod-two {
                 position: relative;
                 left: -93px;
             }
@@ -34,15 +35,17 @@
         }
 
         &-title {
-            font-family: $f-moranga;
-            font-size: 83px;
-            font-weight: 400;
-            line-height: 95px;
-            text-align: center;
-            margin-bottom: 23px;
+            h2 {
+                font-family: $f-moranga;
+                font-size: 83px;
+                font-weight: 400;
+                line-height: 95px;
+                text-align: center;
+                margin-bottom: 23px;
 
-            code {
-                font-weight: 900;
+                code {
+                    font-weight: 900;
+                }
             }
         }
 
@@ -51,6 +54,14 @@
             font-weight: 500;
             line-height: 30px;
             margin-top: 53px;
+
+            p {
+                margin-bottom: 17px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         &-img {

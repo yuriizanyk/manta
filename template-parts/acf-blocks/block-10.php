@@ -12,9 +12,9 @@ $title = get_field('title');
             </div>
         <?php endif; ?>
 
-        <?php if (have_rows('list')) : ?>
+        <?php if (have_rows('social', 'option')) : ?>
             <div class="data-list">
-                <?php while (have_rows('list')) : the_row(); ?>
+                <?php while (have_rows('social', 'option')) : the_row(); ?>
                     <?php
                     $icon = get_sub_field('icon');
                     $link = get_sub_field('link');

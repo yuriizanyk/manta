@@ -1,21 +1,25 @@
 .wcl-block-7 {
-    padding-top: 76px;
-    padding-bottom: 115px;
+    padding-top: 152px;
+    padding-bottom: 159px;
     background-color: #F5F2F0;
 
     .data {
-        &-container{
+        &-container {
             max-width: 1680px;
         }
+
         &-title {
-            font-family: $f-moranga;
-            color: #214752;
-            font-size: 32px;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 33px;
             position: relative;
-            left: -9px;
+            left: -13px;
+
+            h2 {
+                font-family: $f-moranga;
+                color: #214752;
+                font-size: 32px;
+                font-weight: 400;
+                text-align: center;
+                margin-bottom: 30px;
+            }
         }
 
         &-text {
@@ -27,7 +31,7 @@
             max-width: 1185px;
             margin: 0 auto;
             position: relative;
-            left: -9px;
+            left: -13px;
 
             a {
                 color: #214752;
@@ -38,6 +42,10 @@
 
                 &:last-child {
                     margin-bottom: 0;
+                }
+                &:nth-child(3){
+                    font-size: 24px;
+                    margin-top: 18px;
                 }
             }
         }
@@ -60,11 +68,13 @@
             }
 
             &-title {
-                font-size: 24px;
-                color: #214752;
-                font-weight: 700;
-                line-height: 28px;
-                margin-bottom: 31px;
+                h3 {
+                    font-size: 24px;
+                    color: #214752;
+                    font-weight: 700;
+                    line-height: 28px;
+                    margin-bottom: 31px;
+                }
 
                 a {
                     color: #214752;

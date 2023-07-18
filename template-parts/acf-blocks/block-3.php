@@ -1,5 +1,6 @@
 <?php
 
+
 $title   = get_field('title');
 $group_1 = get_field('group_1');
 $group_2 = get_field('group_2');
@@ -21,34 +22,24 @@ $group_2 = get_field('group_2');
                     $image   = $group_1['image'];
                     $link    = $group_1['link'];
                     $image   = wp_get_attachment_image($image, 'image-size-3');
+
+                    $color_picker     = get_field('color_picker');
+                    $color_picker     = !empty($color_picker) ? $color_picker : '#214752';
+                    $custom_color_tag = '';
+                    $custom_color_tag = 'style="background-color: ' . $color_picker . ';"';
                     ?>
                     <div class="data-a">
-                        <div class="data-a-content">
-                            <?php if (!empty($content)) : ?>
-                                <?php echo $content; ?>
-                            <?php endif; ?>
-                        </div>
-
-                        <?php if (!empty($link)) : ?>
-                            <?php
-                            $link_url    = $link['url'];
-                            $link_title  = $link['title'];
-                            $link_target = $link['target'] ?: '_self';
-                            ?>
-                            <div class="data-a-link">
-                                <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>">
-                                    <?php echo $link_title; ?>
-
-                                    <span class="icon-arrow-long-right"></span>
-                                </a>
-                            </div>
-                        <?php endif; ?>
-
                         <?php if (!empty($image)) : ?>
                             <div class="data-a-img">
                                 <?php echo $image; ?>
                             </div>
                         <?php endif; ?>
+
+                        <div class="data-a-content">
+                            <?php if (!empty($content)) : ?>
+                                <?php echo $content; ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>
@@ -60,34 +51,24 @@ $group_2 = get_field('group_2');
                     $image   = $group_2['image'];
                     $link    = $group_2['link'];
                     $image   = wp_get_attachment_image($image, 'image-size-3');
+
+                    $color_picker     = get_field('color_picker');
+                    $color_picker     = !empty($color_picker) ? $color_picker : '#214752';
+                    $custom_color_tag = '';
+                    $custom_color_tag = 'style="color: ' . $color_picker . ';"';
                     ?>
                     <div class="data-a mod-orange">
-                        <div class="data-a-content">
-                            <?php if (!empty($content)) : ?>
-                                <?php echo $content; ?>
-                            <?php endif; ?>
-                        </div>
-
-                        <?php if (!empty($link)) : ?>
-                            <?php
-                            $link_url    = $link['url'];
-                            $link_title  = $link['title'];
-                            $link_target = $link['target'] ?: '_self';
-                            ?>
-                            <div class="data-a-link">
-                                <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>">
-                                    <?php echo $link_title; ?>
-
-                                    <span class="icon-arrow-long-right"></span>
-                                </a>
-                            </div>
-                        <?php endif; ?>
-
                         <?php if (!empty($image)) : ?>
                             <div class="data-a-img">
                                 <?php echo $image; ?>
                             </div>
                         <?php endif; ?>
+
+                        <div class="data-a-content">
+                            <?php if (!empty($content)) : ?>
+                                <?php echo $content; ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>

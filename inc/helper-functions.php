@@ -218,6 +218,15 @@ function wcl_acf_blocks_init() {
             'category'        => 'wcl-category',
             'mode'            => 'edit',
         ));
+
+        acf_register_block_type(array(
+            'name'            => 'acf-block-12',
+            'title'           => __('Why Choose Manta?'),
+            'description'     => __('Why Choose Manta? Block'),
+            'render_template' => 'template-parts/acf-blocks/block-12.php',
+            'category'        => 'wcl-category',
+            'mode'            => 'edit',
+        ));
     }
 }
 add_action('acf/init', 'wcl_acf_blocks_init');

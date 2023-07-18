@@ -10,7 +10,9 @@ $link     = get_field('link');
     <div class="b11-container">
         <?php if (!empty($title)) : ?>
             <div class="b11-title">
-                <?php echo $title; ?>
+                <h3>
+                    <?php echo $title; ?>
+                </h3>
             </div>
         <?php endif; ?>
 

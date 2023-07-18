@@ -42,11 +42,13 @@ $image = wp_get_attachment_image($image, 'image-size-6');
             </div>
 
             <div class="data-col">
+                <div class="data-b">
                 <?php if (!empty($image)) : ?>
                     <div class="data-img">
                         <?php echo $image; ?>
                     </div>
                 <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

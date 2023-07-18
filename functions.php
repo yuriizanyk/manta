@@ -129,8 +129,8 @@ add_filter('big_image_size_threshold', '__return_false');
 /*
 * Add custom image sizes 
 */
-add_image_size('image-size-1', 699, 507, true); // <!-- wcl-block-1 - Hero Header -->
-add_image_size('image-size-1@2x', 1398, 1014, true);
+add_image_size('image-size-1', 681, 539, true); // <!-- wcl-block-1 - Hero Header -->
+add_image_size('image-size-1@2x', 1362, 1078, true);
 add_image_size('image-size-2', 621, 572, true); // <!-- wcl-block-2 - Award-Winning -->
 add_image_size('image-size-2@2x', 1242, 1144, true);
 add_image_size('image-size-3', 306, 402, true); // <!-- wcl-block-3 - Clients Testimonials -->
@@ -139,8 +139,8 @@ add_image_size('image-size-4', 524, 436, true); // <!-- wcl-block-5 - Case Studi
 add_image_size('image-size-4@2x', 1048, 872, true);
 add_image_size('image-size-5', 300, 270, true); // <!-- wcl-block-5 - Case Studies -->
 add_image_size('image-size-5@2x', 600, 540, true);
-add_image_size('image-size-6', 854, 733, true); // <!-- wcl-block-8 - Award Winning Workplace -->
-add_image_size('image-size-6@2x', 1708, 1466, true);
+add_image_size('image-size-6', 794, 670, true); // <!-- wcl-block-8 - Award Winning Workplace -->
+add_image_size('image-size-6@2x', 1588, 1340, true);
 add_image_size('image-size-7', 836, 582, true); // <!-- wcl-block-9 - CTA -->
 add_image_size('image-size-7@2x', 1672, 1164, true);
 
@@ -192,7 +192,9 @@ function wcl_register_nav_menus() {
 	register_nav_menu('footer-menu', 'Footer Menu');
 	register_nav_menu('footer-manta', 'Footer Manta');
 	register_nav_menu('footer-services', 'Footer Services');
+	register_nav_menu('footer-services-2', 'Footer Services 2');
 	register_nav_menu('footer-resources', 'Footer Resources');
+	register_nav_menu('footer-who-we-help', 'Footer Who We Help');
 	register_nav_menu('business-management-software', 'Business Management Software');
 	register_nav_menu('paid-ads-services ', 'Paid Ads Services ');
 	register_nav_menu('websites', 'Websites');
@@ -205,6 +207,7 @@ function wcl_register_nav_menus() {
 	register_nav_menu('health-and-medical', 'Health & Medical');
 	register_nav_menu('small-business', 'Small Business');
 	register_nav_menu('resources', 'Resources');
+	register_nav_menu('services', 'Services');
 }
 
 add_action('after_setup_theme', 'wcl_register_nav_menus');

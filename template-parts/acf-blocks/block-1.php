@@ -1,10 +1,11 @@
 <?php
 
-$group = get_field('group');
-$title = $group['title'];
-$text  = $group['text'];
-$image = get_field('image');
-$image = wp_get_attachment_image($image, 'image-size-1');
+$group    = get_field('group');
+$subhead  = $group['subhead'];
+$title    = $group['title'];
+$subtitle = $group['subtitle'];
+$image    = get_field('image');
+$image    = wp_get_attachment_image($image, 'image-size-1');
 ?>
 <!-- wcl-block-1 - Hero Header -->
 <div class="wcl-block-1">
@@ -13,17 +14,25 @@ $image = wp_get_attachment_image($image, 'image-size-1');
             <div class="data-col">
                 <?php the_breadcrumb(); ?>
 
-                <?php if (!empty($title)) : ?>
-                    <div class="data-title">
-                        <?php echo $title; ?>
-                    </div>
-                <?php endif; ?>
+                <div class="data-a">
+                    <?php if (!empty($subhead)) : ?>
+                        <div class="data-subhead">
+                            <?php echo $subhead; ?>
+                        </div>
+                    <?php endif; ?>
 
-                <?php if (!empty($text)) : ?>
-                    <div class="data-text">
-                        <?php echo $text; ?>
-                    </div>
-                <?php endif; ?>
+                    <?php if (!empty($title)) : ?>
+                        <div class="data-title">
+                            <?php echo $title; ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (!empty($subtitle)) : ?>
+                        <div class="data-subtitle">
+                            <?php echo $subtitle; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
 
             <div class="data-col">
