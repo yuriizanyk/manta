@@ -3,7 +3,7 @@
 
 
 
-define('WCL_THEME_VERSION', '0.101');
+define('WCL_THEME_VERSION', '0.102');
 
 
 
