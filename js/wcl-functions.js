@@ -34,7 +34,71 @@ ready(() => {
 	/* SCRIPTS GO HERE */
 
 
+	// wcl-block-10
 
+	if (document.querySelector('.wcl-block-10')) {
+		let section = document.querySelector('.wcl-block-10');
+		let slider = section.querySelector('.data-list')
+		
+		let swiper = new Swiper(slider, {
+			slidesPerView: 'auto',
+			spaceBetween: 88,
+			slidesOffsetAfter: 0,
+			breakpoints: {
+				0: {
+					slidesOffsetAfter: 0,
+					spaceBetween: 57,
+				},
+				767: {
+					spaceBetween: 88,
+				},
+			}
+		});
+	}
+
+
+
+	// wcl-block-2
+
+	if (document.querySelector('.wcl-block-2')) {
+		let section = document.querySelector('.wcl-block-2');
+
+		addGradientForDesc(section)
+	}
+
+	// addGradientForDesc
+
+	function addGradientForDesc(section) {
+		section.querySelectorAll('.mod-trigger').forEach(element => {
+			let height = element.clientHeight
+			let desc_height = element.children[0].clientHeight
+
+			if (desc_height > height) {
+				element.classList.add('mask')
+			}
+
+			element.addEventListener('mouseover', function (e) {
+				let height = this.clientHeight
+				let desc_height = this.children[0].clientHeight
+
+				if (desc_height <= height) {
+					if (this.classList.contains('mask')) {
+						this.classList.remove('mask')
+					}
+				}
+			})
+
+			element.addEventListener('scroll', function (e) {
+				let height = this.clientHeight
+				let desc_height = this.children[0].clientHeight
+				if (Math.ceil(height + this.scrollTop) >= desc_height) {
+					this.classList.remove('mask')
+				} else {
+					this.classList.add('mask')
+				}
+			})
+		});
+	}
 
 
 

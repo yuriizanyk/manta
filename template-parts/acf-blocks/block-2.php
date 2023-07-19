@@ -27,8 +27,10 @@ $text  = get_field('text');
 
             <div class="data-col">
                 <?php if (!empty($text)) : ?>
-                    <div class="data-text">
-                        <?php echo $text; ?>
+                    <div class="data-text mod-trigger">
+                        <div class="data-text-inner">
+                            <?php echo $text; ?>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>

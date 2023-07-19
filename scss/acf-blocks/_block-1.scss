@@ -18,6 +18,26 @@
             color: $c-orange;
         }
     }
+
+    @media (max-width: 991px) {
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+        font-size: 12.287px;
+        line-height: 137.5%;
+
+        .data {
+            &-separator {
+                margin: 0 13px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        text-align: center;
+    }
 }
 
 .wcl-block-1 {
@@ -44,7 +64,7 @@
             }
         }
 
-        &-a{
+        &-a {
             max-width: 470px;
         }
 
@@ -82,6 +102,106 @@
             left: -15px;
             top: -18px;
             width: 681px;
+        }
+    }
+
+
+    @media (max-width: 1500px) {
+        .data {
+            &-img {
+                max-width: 46vw;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-col {
+                &:first-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        text-align: center;
+
+        .data {
+            &-container {
+                max-width: 660px;
+            }
+
+            &-row {
+                flex-wrap: wrap;
+                row-gap: 41px;
+            }
+
+            &-col {
+                width: 100%;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+            }
+
+            &-a {
+                margin: 0 auto;
+            }
+
+            &-img {
+                margin: 0 auto;
+                left: 0;
+                top: 0;
+            }
+
+            &-subtitle {
+                h2 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        .data {
+            &-subhead {
+                font-size: 16.704px;
+                line-height: 137.5%;
+                max-width: 280px;
+                margin: 0 auto;
+                margin-bottom: 8px;
+            }
+
+            &-title {
+                h1 {
+                    font-size: 29.581px;
+                    line-height: 115%;
+                    margin-bottom: 9px;
+                }
+            }
+
+            &-subtitle {
+                h2 {
+                    font-size: 24px;
+                    line-height: 115%;
+                }
+            }
+
+            &-img {
+                max-width: 311px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        text-align: left;
+
+        .data {
+            &-subhead{
+                margin-left: 0;
+            }
         }
     }
 }

@@ -1,3 +1,5 @@
+
+
 .wcl-block-9 {
     position: relative;
     margin-bottom: 100px;
@@ -10,6 +12,7 @@
         width: 100%;
         height: 636px;
         background: linear-gradient(180deg, #D6E8EB 0%, rgba(214, 232, 235, 0.00) 87.50%);
+        z-index: -1;
     }
 
     &::after {
@@ -20,6 +23,7 @@
         width: 100%;
         height: 638px;
         background: linear-gradient(180deg, rgba(245, 242, 240, 0.07) 16.15%, #D6E8EB 100%);
+        z-index: -1;
     }
 
     .data {
@@ -103,6 +107,86 @@
             position: relative;
             left: 55px;
             max-width: 836px;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .data {
+            &-title {
+                h2 {
+                    left: 0;
+                    max-width: 1000px;
+                    font-size: 63px;
+                    line-height: 115%;
+                    margin-bottom: 67px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-row {
+                align-items: center;
+            }
+
+            &-col {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            &-title {
+                h2 {
+                    max-width: 710px;
+                    font-size: 45px;
+                    margin-bottom: 51px;
+                }
+            }
+
+            &-line {
+                max-width: 260px;
+                margin-bottom: 93px;
+                left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-row {
+                flex-direction: column-reverse;
+                row-gap: 40px;
+                max-width: 640px;
+                margin: 0 auto;
+            }
+
+            &-col {
+                width: 100% !important;
+
+                &:first-child {
+                    max-width: 500px;
+                }
+            }
+
+            &-img {
+                left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .data {
+            &-title {
+                h2 {
+                    font-size: 53.601px;
+                    line-height: 115%;
+                }
+            }
+
+            &-line {
+                max-width: 168px;
+            }
         }
     }
 }

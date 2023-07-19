@@ -48,15 +48,16 @@ a {
 }
 
 .wcl-body-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 100vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    justify-content: space-between
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // min-height: 100vh;
+    // -webkit-box-orient: vertical;
+    // -webkit-box-direction: normal;
+    // -ms-flex-direction: column;
+    // flex-direction: column;
+    // justify-content: space-between
+    overflow-x: hidden;
 }
 
 .wcl-section {
@@ -174,8 +175,7 @@ ol {
 @media only screen and (max-width: 768px) {
 
     .wcl-container {
-        // padding-left: 20px;
-        // padding-right: 20px;
+        padding: 0 30px;
     }
 
 }

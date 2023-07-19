@@ -13,22 +13,24 @@ $title = get_field('title');
         <?php endif; ?>
 
         <?php if (have_rows('social', 'option')) : ?>
-            <div class="data-list">
-                <?php while (have_rows('social', 'option')) : the_row(); ?>
-                    <?php
-                    $icon = get_sub_field('icon');
-                    $link = get_sub_field('link');
-                    ?>
-                    <div class="data-item">
+            <div class="data-list swiper">
+                <div class="data-list-inner swiper-wrapper">
+                    <?php while (have_rows('social', 'option')) : the_row(); ?>
+                        <?php
+                        $icon = get_sub_field('icon');
+                        $link = get_sub_field('link');
+                        ?>
                         <?php if (!empty($link)) : ?>
-                            <a href="<?php echo $link; ?>" class="data-item-inner" target="_blank">
-                                <?php if (!empty($icon)) : ?>
-                                    <?php echo $icon; ?>
-                                <?php endif; ?>
-                            </a>
+                            <div class="data-item swiper-slide">
+                                <a href="<?php echo $link; ?>" class="data-item-inner" target="_blank">
+                                    <?php if (!empty($icon)) : ?>
+                                        <?php echo $icon; ?>
+                                    <?php endif; ?>
+                                </a>
+                            </div>
                         <?php endif; ?>
-                    </div>
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
+                </div>
             </div>
         <?php endif; ?>
     </div>

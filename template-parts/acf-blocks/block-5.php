@@ -45,6 +45,12 @@ $total_count = $query_obj->found_posts;
                     </div>
                 <?php endif; ?>
 
+                <?php if (!empty($image)) : ?>
+                    <div class="data-img mod-two">
+                        <?php echo $image; ?>
+                    </div>
+                <?php endif; ?>
+
                 <?php if (!empty($group_text)) : ?>
                     <div class="data-text">
                         <?php echo $group_text; ?>

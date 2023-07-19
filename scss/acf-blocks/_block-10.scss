@@ -1,6 +1,15 @@
+.data-content {
+    [class^="wcl-block-"] {
+        display: none;
+    }
+}
+
+
+
 .wcl-block-10 {
     margin-top: 225px;
     margin-bottom: 144px;
+    display: block !important;
 
     .data {
         &-title {
@@ -21,14 +30,26 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 0 -44px;
             row-gap: 40px;
             position: relative;
             left: -29px;
+            max-width: 1006px;
+            margin: 0 auto;
+
+            &:not(.swiper-initialized) {
+                .data-list-inner {
+                    width: auto;
+                    margin: 0 -44px;
+                }
+
+                .data-item {
+                    padding: 0 44px;
+                }
+            }
         }
 
         &-item {
-            padding: 0 44px;
+            width: auto;
 
             &-inner {
                 width: 94px;
@@ -64,6 +85,73 @@
                     &::before {
                         color: #214752;
                         transition: all 0.25s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+            &-list {
+                left: 0;
+                overflow: visible;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-title {
+                h2 {
+                    font-size: 38px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 98px;
+        margin-bottom: 110px;
+
+        .data {
+            &-title {
+                h2 {
+                    font-size: 29.112px;
+                    line-height: 31.441px;
+                    max-width: 230px;
+                    margin: 0 auto;
+                    margin-bottom: 28px;
+                }
+            }
+
+            &-list {
+                &:not(.swiper-initialized) {
+                    .data-list-inner {
+                        margin: 0 -24px;
+                    }
+
+                    .data-item {
+                        padding: 0 24px;
+                    }
+                }
+            }
+
+            &-item {
+                &-inner {
+                    width: 61.418px;
+                    height: 61.418px;
+
+                    span {
+                        font-size: 24px;
+
+                        &.icon-twitter {
+                            font-size: 20px;
+                        }
+
+                        &.icon-youtube {
+                            font-size: 20px;
+                        }
                     }
                 }
             }

@@ -55,6 +55,7 @@
             line-height: 30px;
             margin-top: 53px;
 
+
             p {
                 margin-bottom: 17px;
 
@@ -68,4 +69,136 @@
             max-width: 621px;
         }
     }
+
+    @media (max-width: 1660px) {
+        .data {
+            &-container {
+                &.mod-two {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1600px) {
+        .data {
+            &-title {
+                h2 {
+                    font-size: 63px;
+                    line-height: 1.15;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1580px) {
+        .data {
+            &-col {
+                &:first-child {
+                    min-width: 680px;
+                }
+            }
+
+            &-text {
+                max-height: 485px;
+                scrollbar-width: none;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &.mask {
+                    -webkit-mask-image: linear-gradient(0, rgba(255, 255, 255, 0) 0%, #fff 35%);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .data {
+            &-col {
+                &:first-child {
+                    min-width: unset;
+                }
+            }
+
+            &-text {
+                max-height: 345px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .data {
+
+            &-row {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+            }
+
+            &-col {
+                width: 100% !important;
+
+                &:nth-child(2) {
+                    margin-bottom: 31px;
+                }
+            }
+
+            &-title {
+                h2 {
+                    font-size: 44px;
+                    line-height: 115%;
+                }
+            }
+
+            &-text {
+                max-height: unset;
+                text-align: center;
+                max-width: 790px;
+                margin: 0 auto;
+            }
+
+            &-img {
+                margin: 0 auto;
+                text-align: center;
+
+                img {
+                    max-height: 460px;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .data {
+            &-title {
+                h2 {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        .data {
+            &-img {
+                position: relative;
+                height: 460px;
+
+                img {
+                    position: absolute;
+                    min-width: 499px;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
 }

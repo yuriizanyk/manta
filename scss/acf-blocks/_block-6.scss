@@ -55,7 +55,7 @@
                 max-height: 107px;
                 min-width: 84px;
 
-               >  span {
+                >span {
                     display: block;
                 }
             }
@@ -64,6 +64,61 @@
                 font-size: 24px;
                 font-weight: 700;
                 line-height: 28px;
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .data {
+            &-list {
+                max-width: 850px;
+                margin: 0 auto;
+                margin-top: 90px;
+            }
+
+            &-item {
+                &-inner {
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 27px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 900px) {
+
+        .data {
+            &-list {
+                max-width: 440px;
+            }
+
+            &-item {
+                width: 100%;
+            }
+
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 0;
+        margin-bottom: 75px;
+
+        .data {
+            &-text {
+                line-height: 115%;
+            }
+
+            &-list {
+                row-gap: 50px;
+            }
+
+            &-item {
+                &-text {
+                    line-height: 115%;
+                }
             }
         }
     }
