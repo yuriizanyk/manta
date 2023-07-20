@@ -378,9 +378,8 @@
     }
 
     @media (max-width: 991px) {
+        box-shadow: none;
         .data {
-
-
             &-col {
                 &:first-child {
                     margin: 0 auto;
@@ -395,6 +394,10 @@
                 margin-right: 0;
             }
 
+            &-row{
+                padding-bottom: 14px;
+                height: 108px;
+            }
 
             &-b1 {
                 &-item {
@@ -402,7 +405,7 @@
                     position: absolute;
                     right: 40px;
                     top: 50%;
-                    margin-top: -12px;
+                    margin-top: -16px;
 
                     &:last-child {
                         display: block;
@@ -421,16 +424,10 @@
             }
 
             &-row {
-                align-items: flex-end;
-                padding-bottom: 20px;
             }
 
             &-b1 {
                 &-item {
-                    top: unset;
-                    right: 16px;
-                    bottom: 20px;
-
                     &:last-child {
                         display: block;
                     }
@@ -439,11 +436,19 @@
         }
     }
 
+    @media (max-width: 575px) {
+        .data {
+            &-row {
+      
+            }
+        }
+    }
+
+
     @media (max-width: 280px) {
         transform: scale(1);
 
-        .data {
-        }
+        .data {}
     }
 }
 

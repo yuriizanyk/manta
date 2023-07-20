@@ -169,6 +169,12 @@ ol {
     }
 }
 
+@media (max-width: 991px) {
+    .wcl-body-inner {
+        padding-top: 108px;
+    }
+}
+
 /*
 * Responsive Design
 */
@@ -185,5 +191,12 @@ ol {
     html {
         min-width: 280px;
         overflow-x: auto;
+    }
+}
+
+
+@media (max-width: 575px){
+    .wcl-body-inner{
+        max-width: 375px;
     }
 }

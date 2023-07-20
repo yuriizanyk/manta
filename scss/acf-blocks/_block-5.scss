@@ -206,7 +206,56 @@
             }
         }
     }
+
+
+    @media (max-width: 575px) {
+        .data {
+            &-title {
+                left: -2px;
+            }
+
+            &-img {
+                max-width: 220px;
+                height: 224px;
+                margin-bottom: 44px;
+                position: relative;
+                left: -29px;
+                aspect-ratio: unset;
+
+                img {
+                    width: 260px;
+                    left: 37px;
+                    top: 11px;
+                    max-width: calc(100% + 42px);
+                }
+            }
+
+            &-text {
+                max-width: 300px;
+                left: -6px;
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .wcl-block-5 {
     .data {
@@ -309,7 +358,7 @@
     }
 
     @media (max-width: 767px) {
-        padding-bottom: 76px;
+        padding-bottom: 78px;
 
         .data {
             &-container {
@@ -319,7 +368,7 @@
             }
 
             &-list {
-                margin-top: 60px;
+                margin-top: 65px;
             }
 
             &-item {
@@ -334,14 +383,56 @@
     }
 
     @media (max-width: 575px) {
+        &::after {
+            bottom: 0;
+            opacity: 1;
+            top: unset;
+        }
+
         .data {
+
+            &-list {
+                row-gap: 0;
+            }
+
             &-item {
+                position: relative;
+                left: -3px;
+                margin-bottom: 41px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(3) {
+                    margin-bottom: 34px;
+                }
+
                 &-inner {
+                    padding: 20px 27px;
+
                     max-width: 262px;
+                    height: 236px;
                 }
 
                 &-link {
-                    font-size: 14px;
+                    right: 11px;
+                    bottom: 11px;
+
+                    &-inner {
+                        font-size: 14.018px;
+
+                        span {
+                            font-size: 10px;
+                            margin-left: 7px;
+                        }
+                    }
+                }
+
+                &-logo {
+                    img {
+                        width: 89px;
+                    }
                 }
             }
         }

@@ -191,10 +191,14 @@ function wcl_register_nav_menus() {
 	register_nav_menu('main-menu', 'Main Menu');
 	register_nav_menu('footer-menu', 'Footer Menu');
 	register_nav_menu('footer-manta', 'Footer Manta');
+	register_nav_menu('footer-manta-mobile', 'Footer Manta Mobile');
 	register_nav_menu('footer-services', 'Footer Services');
 	register_nav_menu('footer-services-2', 'Footer Services 2');
+	register_nav_menu('footer-services-mobile', 'Footer Services Mobile');
 	register_nav_menu('footer-resources', 'Footer Resources');
+	register_nav_menu('footer-resources-mobile', 'Footer Resources Mobile');
 	register_nav_menu('footer-who-we-help', 'Footer Who We Help');
+	register_nav_menu('footer-mobile', 'Footer Mobile');
 	register_nav_menu('business-management-software', 'Business Management Software');
 	register_nav_menu('paid-ads-services ', 'Paid Ads Services ');
 	register_nav_menu('websites', 'Websites');
@@ -339,6 +343,15 @@ function register_my_widgets() {
 	register_sidebar(array(
 		'name'          => 'Footer Sidebar',
 		'id'            => 'footer-sidebar',
+		'before_widget' => '<div class="data-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="data-widget-title">',
+		'after_title'   => '</h3>',
+	));
+	
+	register_sidebar(array(
+		'name'          => 'Footer Sidebar Mobile',
+		'id'            => 'footer-sidebar-mobile',
 		'before_widget' => '<div class="data-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="data-widget-title">',

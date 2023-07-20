@@ -1,5 +1,3 @@
-
-
 .wcl-block-7 {
     padding-top: 152px;
     padding-bottom: 159px;
@@ -172,7 +170,7 @@
                     line-height: 115%;
                     max-width: 310px;
                     margin: 0 auto;
-                    margin-bottom: 34px;
+                    margin-bottom: 32px;
                 }
             }
 
@@ -202,6 +200,63 @@
                 &-text {
                     font-size: 16.503px;
                     line-height: 137.5%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 49px;
+        height: 5853px;
+
+        .data {
+            &-title {
+                left: 10px;
+            }
+
+            &-text {
+                max-width: 306px;
+                margin: 0 auto;
+                left: 6px;
+
+                h2 {
+                    margin-bottom: 32px;
+                }
+
+                p {
+                    &:nth-child(1) {
+                        margin-bottom: 15px;
+                    }
+
+                    &:nth-child(3) {
+                        max-width: 280px;
+                        margin: 0 auto;
+                        margin-top: 15px;
+                        line-height: 137.5%;
+                    }
+                }
+            }
+
+            &-list {
+                margin-top: 65px;
+            }
+
+            &-item {
+                &-icon {
+                    width: 147.607px;
+                    height: 147.607px;
+                }
+
+                &-title {
+                    margin: 0 -8px;
+                    h3{
+                        margin-bottom: 26px;
+                    }
+                }
+
+                &-text {
+                    max-width: 266px;
+                    margin: 0 auto;
                 }
             }
         }

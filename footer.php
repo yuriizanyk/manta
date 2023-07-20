@@ -35,7 +35,6 @@ $social = get_field('social', 'option');
 					</div>
 				<?php endif; ?>
 
-
 				<div class="data-copyright">
 					<?php
 					$date = date("Y");
@@ -46,9 +45,17 @@ $social = get_field('social', 'option');
 			</div>
 
 			<div class="data-col">
-				<?php if (is_active_sidebar('footer-sidebar')) : ?>
-					<?php dynamic_sidebar('footer-sidebar'); ?>
-				<?php endif; ?>
+				<div class="data-sidebar">
+					<?php if (is_active_sidebar('footer-sidebar')) : ?>
+						<?php dynamic_sidebar('footer-sidebar'); ?>
+					<?php endif; ?>
+				</div>
+
+				<div class="data-sidebar mod-two">
+					<?php if (is_active_sidebar('footer-sidebar-mobile')) : ?>
+						<?php dynamic_sidebar('footer-sidebar-mobile'); ?>
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
 
@@ -57,7 +64,7 @@ $social = get_field('social', 'option');
 				<div class="data-a-col">
 					<div class="data-b1">
 						<div class="data-b1-title">
-						Manta Business Listing Members
+							Manta Business Listing Members
 						</div>
 
 						<div class="data-b1-a">
@@ -96,6 +103,48 @@ $social = get_field('social', 'option');
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="data-b2">
+			<?php wp_nav_menu(
+				array(
+					'container'      => '',
+					'items_wrap'     => '<ul class="data-b2-menu">%3$s</ul>',
+					'theme_location' => 'footer-mobile',
+					'depth'          => 1,
+					'fallback_cb'    => '',
+				)
+			); ?>
+		</div>
+
+		<div class="data-b3">
+			<div class="data-copyright">
+				<?php
+				$date = date("Y");
+				?>
+				© <?php echo $date; ?> Manta Media Inc.
+				All rights reserved.
+			</div>
+
+			<?php if (have_rows('social', 'option')) : ?>
+				<div class="data-social">
+					<?php while (have_rows('social', 'option')) : the_row(); ?>
+						<?php
+						$icon = get_sub_field('icon');
+						$link = get_sub_field('link');
+						?>
+						<div class="data-social-item">
+							<?php if (!empty($link)) : ?>
+								<a href="<?php echo $link; ?>" class="data-social-item-inner" target="_blank">
+									<?php if (!empty($icon)) : ?>
+										<?php echo $icon; ?>
+									<?php endif; ?>
+								</a>
+							<?php endif; ?>
+						</div>
+					<?php endwhile; ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </footer> <!-- #wcl-main-footer -->

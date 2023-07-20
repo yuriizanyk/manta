@@ -1,5 +1,3 @@
-
-
 .wcl-block-8 {
     padding-top: 196px;
     margin-bottom: 247px;
@@ -74,12 +72,6 @@
         }
 
         &-img {
-            // mask-image: url('../img/bl_8_mask_img.png');
-            // //mask-size: 100% 100%;
-            // mask-size: cover;
-            // mask-position: center;
-            // mask-repeat: no-repeat;
-
             position: relative;
             left: -30px;
             top: 32px;
@@ -162,8 +154,75 @@
     @media (max-width: 767px) {
         padding-top: 37px;
         margin-bottom: 72px;
-
-        .data {}
     }
 
+
+    @media (max-width: 575px) {
+        .data {
+            &-container {
+                padding: 0 30px;
+            }
+
+            &-row {
+                margin: 0 -30px;
+            }
+
+            &-col {
+                padding: 0 30px;
+            }
+
+            &-title {
+                position: relative;
+                left: 3px;
+
+                h2 {
+                    font-size: 32px;
+                    line-height: 115%;
+                    margin-bottom: 22px;
+                }
+            }
+
+            &-text {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 137.5%;
+                position: relative;
+                left: 3px;
+            }
+
+            &-b1 {
+                max-width: 276px;
+                margin: 0 auto;
+            }
+
+            &-b {
+                &::after {
+                    right: unset;
+                    left: 50%;
+                    transform: none;
+                    margin-left: -30px;
+                    top: -33px;
+                    width: 217px;
+                    height: 735px;
+                    background-image: url('../img/bl_8_img_el_2.png');
+                    background-size: contain;
+                }
+            }
+
+            &-link {
+                margin-top: 23px;
+
+                a {
+                    height: 50.654px;
+                    font-size: 15.196px;
+                    padding: 3px 25px;
+                    border-radius: 6.07px;
+                }
+            }
+
+            &-img {
+                margin-right: -12px;
+            }
+        }
+    }
 }

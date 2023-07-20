@@ -1,15 +1,6 @@
-.data-content {
-    [class^="wcl-block-"] {
-        display: none;
-    }
-}
-
-
-
 .wcl-block-10 {
     margin-top: 225px;
     margin-bottom: 144px;
-    display: block !important;
 
     .data {
         &-title {
@@ -143,7 +134,7 @@
                     height: 61.418px;
 
                     span {
-                        font-size: 24px;
+                        font-size: 27px;
 
                         &.icon-twitter {
                             font-size: 20px;
@@ -153,6 +144,19 @@
                             font-size: 20px;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .data {
+            &-container{
+                padding: 0 29px;
+            }
+            &-title {
+                h2 {
+                    left: -8px;
                 }
             }
         }
