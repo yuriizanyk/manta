@@ -228,7 +228,9 @@
     @media (max-width: 575px) {
         .data {
             &-title {
-                left: -4px;
+                h2{
+                    left: -4px;
+                }
             }
         }
     }

@@ -189,7 +189,24 @@
     }
 
     @media (max-width: 575px) {
-        height: 1649px;
+
+        &::after {
+            background: linear-gradient(180deg, rgba(245, 242, 240, 0.07) 16.15%, #D6E8EB 100%);
+            width: 528px;
+            height: 548px;
+            left: 0;
+            min-width: 100%;
+        }
+
+        &::before {
+            background: linear-gradient(180deg, #D6E8EB 0%, rgba(214, 232, 235, 0.00) 87.50%);
+            width: 412px;
+            height: 756px;
+            left: 0;
+            top: 548px;
+            min-width: 100%;
+        }
+
         .data {
             &-title {
                 left: 3px;

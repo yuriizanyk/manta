@@ -35,6 +35,28 @@
 			<div class="data-container wcl-container">
 				<div class="data-row">
 					<div class="data-col">
+						<div class="data-search-btn">
+							<img src="<?php echo get_stylesheet_directory_uri() . '/img/search.svg'; ?>" alt="img">
+						</div>
+
+						<div class="data-search">
+							<div class="data-search-overlay"></div>
+
+							<div class="data-search-container wcl-container">
+								<form class="data-search-form" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+									<div class="data-search-close">
+										<?php echo file_get_contents(get_stylesheet_directory_uri() . '/img/close.svg', false); ?>
+									</div>
+
+									<input type="text" name="s" placeholder="Search this site…" value="<?php echo esc_attr(get_search_query()); ?>" required>
+
+									<button type="submit">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/img/search.svg'; ?>" alt="img">
+									</button>
+								</form>
+							</div>
+						</div>
+
 						<div class="data-logo">
 							<a href="<?php echo site_url('/'); ?>">
 								<?php if (!empty($logo)) : ?>

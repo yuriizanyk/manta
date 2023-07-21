@@ -292,6 +292,20 @@
                 }
             }
         }
+
+        &-sidebar {
+            &.mod-two {
+                display: none;
+            }
+        }
+
+        &-b2 {
+            display: none;
+        }
+
+        &-b3 {
+            display: none;
+        }
     }
 
 
@@ -513,6 +527,7 @@
 
     @media (max-width: 575px) {
         padding-top: 28px;
+        padding-bottom: 80px;
 
         .data {
             &-container {
@@ -526,16 +541,6 @@
             }
 
             &-widget {
-                .menu-footer-manta-mobile-container {
-                    .menu {
-                        li {
-                            &:first-child {
-                                //   max-width: 120px;
-                            }
-                        }
-                    }
-                }
-
                 >div {
                     row-gap: 18px;
 
@@ -550,7 +555,7 @@
                                 margin-bottom: 13px;
                             }
 
-                           .menu li {
+                            .menu li {
                                 line-height: 172.5%;
                                 margin-bottom: 0;
                             }
@@ -585,9 +590,48 @@
             }
 
             &-a {
+                margin-top: 28px;
+                padding-left: 8px;
                 padding-top: 16px;
-    margin-top: 28px;
+
+                &-row {
+                    row-gap: 18px;
+                }
+
                 &-col {
+                    &:nth-child(1) {
+                        .data-b1 {
+                            &-title {
+                                display: none;
+
+                                &.mod-mobile {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .data {
+                            &-b1 {
+                                &-text {
+                                    font-size: 16px;
+                                    line-height: 137.5%;
+                                    max-width: 300px;
+                                    margin-left: 0;
+
+                                    em {
+                                        font-style: normal;
+                                    }
+                                }
+
+                                &-btn {
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+
                     &:nth-child(3) {
                         display: none;
                     }
@@ -595,8 +639,9 @@
             }
 
             &-b2 {
-                margin-top: 30px;
-                margin-bottom: 20px;
+                margin-top: 34px;
+                margin-bottom: 23px;
+                display: block;
 
                 &-menu {
                     font-size: 16px;
@@ -604,7 +649,7 @@
                     line-height: 137.5%;
                     border-top: 1px solid $c-white;
                     border-bottom: 1px solid $c-white;
-                    padding: 15px 0;
+                    padding: 19px 0 16px;
                     margin-bottom: 0;
 
                     li {
@@ -612,7 +657,13 @@
 
                         &::after {
                             content: ' · ';
-                            margin: 0 3px;
+                            margin: 0 4px;
+                        }
+
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -623,17 +674,21 @@
                 column-gap: 20px;
                 flex-wrap: wrap;
                 row-gap: 20px;
-                justify-content: space-between;
 
                 .data-copyright {
                     font-size: 16px;
-                    line-height: 137.5%;
+                    line-height: 160%;
                     min-width: 180px;
+                    margin-right: 27px;
                 }
 
                 .data-social {
+                    margin: 0 -12px;
+                    left: 0;
+
                     &-item {
                         display: none;
+                        padding: 0 6px;
 
                         &:nth-child(1),
                         &:nth-child(2) {

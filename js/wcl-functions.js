@@ -39,7 +39,7 @@ ready(() => {
 	if (document.querySelector('.wcl-block-10')) {
 		let section = document.querySelector('.wcl-block-10');
 		let slider = section.querySelector('.data-list')
-		
+
 		let swiper = new Swiper(slider, {
 			slidesPerView: 'auto',
 			spaceBetween: 88,
@@ -108,6 +108,26 @@ ready(() => {
 	if (document.querySelector('.wcl-header')) {
 
 		let section = document.querySelector('.wcl-header');
+
+
+		// Search
+
+		section.querySelector('.data-search-btn').addEventListener('click', function (e) {
+			section.classList.add('search-active')
+		})
+
+		document.addEventListener('click', function (e) {
+			if (section.classList.contains('search-active') && !e.target.closest('.wcl-header')) {
+				section.classList.remove('search-active')
+			}
+		});
+
+		section.querySelector('.data-search-close').addEventListener('click', function (e) {
+			if (section.classList.contains('search-active')) {
+				section.classList.remove('search-active')
+			}
+		})
+
 
 		// Btn menu
 

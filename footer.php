@@ -64,7 +64,12 @@ $social = get_field('social', 'option');
 				<div class="data-a-col">
 					<div class="data-b1">
 						<div class="data-b1-title">
-							Manta Business Listing Members
+							<span>Listing Members</span>
+							Manta Business
+						</div>
+
+						<div class="data-b1-title mod-mobile">
+							Manta Members
 						</div>
 
 						<div class="data-b1-a">

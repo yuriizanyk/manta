@@ -34,6 +34,10 @@
 
         &-logo {
             margin-right: 70px;
+
+            img{
+                width: 90px;
+            }
         }
 
         &-menu {
@@ -186,6 +190,14 @@
                     }
                 }
             }
+        }
+
+        &-search-btn {
+            display: none;
+        }
+
+        &-search{
+            display: none;
         }
     }
 
@@ -379,7 +391,21 @@
 
     @media (max-width: 991px) {
         box-shadow: none;
+
+        &.search-active {
+            .data {
+                &-search {
+                    display: flex;
+                }
+            }
+        }
+
         .data {
+            &-row {
+                padding-bottom: 14px;
+                height: 108px;
+            }
+
             &-col {
                 &:first-child {
                     margin: 0 auto;
@@ -390,14 +416,115 @@
                 }
             }
 
-            &-logo {
-                margin-right: 0;
+
+            &-search {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                align-items: center;
+                background-color: $c-blue-dark;
+                z-index: 10;
+
+                &-overlay {
+                    display: none;
+                    position: fixed;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 78px);
+                    z-index: 10;
+                }
+
+                &-close {
+                    margin-right: 27px;
+                    position: relative;
+                    flex-shrink: 0;
+                    cursor: pointer;
+                    line-height: 1;
+                    top: 1px;
+
+                    svg {
+                        width: 16px;
+                        fill: $c-white;
+                    }
+                }
+
+                &-container {
+                    max-width: unset;
+                }
+
+                &-form {
+                    display: flex;
+                    align-items: center;
+                }
+
+                input {
+                    width: 100%;
+                    font-family: $f-moranga;
+                    font-weight: 500;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    padding: 0;
+                    border: none;
+                    background-color: transparent;
+                    color: $c-white;
+
+                    &::placeholder {
+                        font-family: $f-moranga;
+                        color: $c-white;
+                    }
+                }
+
+                button {
+                    margin-left: 49px;
+                    width: 24px;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    padding: 0;
+                    line-height: 1;
+                    background-color: transparent;
+
+                    svg {
+                        width: 24px;
+                    }
+                }
             }
 
-            &-row{
-                padding-bottom: 14px;
-                height: 108px;
+            &-nav {
+                top: 108px;
+                height: calc(100% - 108px);
             }
+
+            &-search-btn {
+                display: block;
+                position: absolute;
+                left: 40px;
+                top: 50%;
+                margin-top: -17px;
+                cursor: pointer;
+
+                svg {
+                    width: 24px;
+                }
+            }
+
+
+            &-logo {
+                margin-right: 0;
+
+                img {
+                    width: 98px;
+                    position: relative;
+                    top: 1px;
+                }
+            }
+
 
             &-b1 {
                 &-item {
@@ -423,14 +550,25 @@
                 padding: 0 16px;
             }
 
-            &-row {
-            }
+            &-row {}
 
             &-b1 {
                 &-item {
+                    right: 21px;
+
                     &:last-child {
                         display: block;
                     }
+                }
+            }
+
+            &-search-btn {
+                left: 21px;
+            }
+
+            &-search{
+                &-container{
+                    padding: 0 21px;
                 }
             }
         }
@@ -438,18 +576,14 @@
 
     @media (max-width: 575px) {
         .data {
-            &-row {
-      
-            }
+     
         }
     }
 
 
-    @media (max-width: 280px) {
-        transform: scale(1);
-
-        .data {}
-    }
+    // @media (max-width: 280px) {
+    //     transform: scale(1);
+    // }
 }
 
 
