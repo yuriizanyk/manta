@@ -667,6 +667,12 @@
         background-color: $c-white;
         display: none;
 
+        .menu-business-management-software-container {
+            ul {
+                max-width: unset;
+            }
+        }
+
         .wcl-block-11 {
             max-width: 210px;
             margin: 0 auto;
