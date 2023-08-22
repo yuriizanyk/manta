@@ -35,7 +35,7 @@
         }
 
         &-title {
-            h2 {
+            > * {
                 font-family: $f-moranga;
                 font-size: 83px;
                 font-weight: 400;
@@ -83,7 +83,7 @@
     @media (max-width: 1600px) {
         .data {
             &-title {
-                h2 {
+                > * {
                     font-size: 63px;
                     line-height: 1.15;
                 }
@@ -146,7 +146,7 @@
             }
 
             &-title {
-                h2 {
+                > * {
                     font-size: 44px;
                     line-height: 115%;
                 }
@@ -177,7 +177,7 @@
 
         .data {
             &-title {
-                h2 {
+                > * {
                     br {
                         display: none;
                     }
@@ -217,7 +217,7 @@
             &-title {
                 margin: 0 -31px;
 
-                h2 {
+                > * {
                     max-width: 348px;
                     margin: 0 auto;
                     margin-bottom: 32px;

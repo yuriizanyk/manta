@@ -1,0 +1,43 @@
+.wcl-breadcrumbs {
+    font-weight: 700;
+    line-height: 22px;
+    font-size: 16px;
+    margin-bottom: 95px;
+
+    a {
+        text-decoration: none;
+    }
+
+    .data {
+        &-separator {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        &-current {
+            color: $c-orange;
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 21px;
+        font-size: 12.287px;
+        line-height: 137.5%;
+        position: relative;
+        left: -4px;
+
+        .data {
+            &-separator {
+                margin: 0 12px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        text-align: center;
+    }
+}

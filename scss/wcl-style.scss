@@ -1,4 +1,3 @@
-
 // Defaults
 @import 'defaults/reset';
 @import 'defaults/variables';
@@ -10,9 +9,11 @@
 // Sections
 @import 'sections/header';
 @import 'sections/footer';
+@import 'sections/breadcrumbs';
 
 
 // ACF Blocks
+@import 'acf-blocks/block-1'; //  Hero Header
 @import 'acf-blocks/block-1'; //  Hero Header
 @import 'acf-blocks/block-2'; //  Award-Winning
 @import 'acf-blocks/block-3'; //  Hero Header

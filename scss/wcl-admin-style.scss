@@ -1,22 +1,21 @@
-
 .wcl-2-columns,
 .wcl-3-columns,
 .wcl-4-columns,
 .wcl-5-columns,
 .wcl-6-columns {
 
-    & > .acf-input > .acf-repeater > .acf-table {
+    &>.acf-input>.acf-repeater>.acf-table {
 
         display: flex;
         flex-direction: column;
-        
-        & > tbody {
+
+        &>tbody {
 
             display: flex;
             flex-wrap: wrap;
 
-            & > .acf-row .acf-fields {
-                width: 100%!important;
+            &>.acf-row .acf-fields {
+                width: 100% !important;
             }
 
         }
@@ -27,7 +26,7 @@
 
 .wcl-2-columns {
 
-    & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
         width: 100%;
         max-width: 50%;
     }
@@ -37,7 +36,7 @@
 
 .wcl-3-columns {
 
-    & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
         width: 100%;
         max-width: 33%;
     }
@@ -46,7 +45,7 @@
 
 .wcl-4-columns {
 
-    & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
         width: 100%;
         max-width: 25%;
     }
@@ -55,7 +54,7 @@
 
 .wcl-5-columns {
 
-    & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
         width: 100%;
         max-width: 20%;
     }
@@ -64,20 +63,22 @@
 
 .wcl-6-columns {
 
-    & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    &>.acf-input>.acf-repeater>.acf-table>tbody>.acf-row {
         width: 100%;
         max-width: 16.66%;
     }
 
 }
 
-/* Main column width - pages */
-// .post-type-page .wp-block {
-//     max-width: 1240px;
-//     width: 90%;
-// }
 
-// .post-type-post .wp-block {
-//     max-width: 1240px;
-//     width: 90%;
-// }
+.wcl-small-title-block {
+
+    //  height: 310px;
+    .acf-field-64b572c2df62a{
+        .acf-editor-wrap iframe {
+            height: 150px !important;
+            min-height: unset !important;
+        }
+    }
+  
+}

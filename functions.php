@@ -50,7 +50,13 @@ add_action('wp_enqueue_scripts', 'wcl_theme_enqueue_scripts');
 * Enqueueing Styles & Scripts To Admin Panel
 */
 function wcl_admin_enqueue_scripts($hook) {
+
 	wp_enqueue_style('wcl-admin-style', get_template_directory_uri() . '/css/wcl-admin-style.min.css', array(), WCL_THEME_VERSION);
+
+
+	if ($_SERVER["SERVER_ADDR"] != '127.0.0.1') {
+		wp_enqueue_style('wcl-admin-style-live', get_template_directory_uri() . '/css/wcl-admin-style-live.css', array(), WCL_THEME_VERSION);
+	}
 }
 
 add_action('admin_enqueue_scripts', 'wcl_admin_enqueue_scripts');
@@ -348,7 +354,7 @@ function register_my_widgets() {
 		'before_title'  => '<h3 class="data-widget-title">',
 		'after_title'   => '</h3>',
 	));
-	
+
 	register_sidebar(array(
 		'name'          => 'Footer Sidebar Mobile',
 		'id'            => 'footer-sidebar-mobile',

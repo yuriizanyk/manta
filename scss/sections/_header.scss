@@ -35,7 +35,7 @@
         &-logo {
             margin-right: 70px;
 
-            img{
+            img {
                 width: 90px;
             }
         }
@@ -196,7 +196,7 @@
             display: none;
         }
 
-        &-search{
+        &-search {
             display: none;
         }
     }
@@ -235,7 +235,6 @@
                 background-color: $c-white;
                 padding: 36px 24px 59px;
                 text-align: center;
-                background-color: #e5e5e5;
                 overflow-y: auto;
                 display: none;
 
@@ -550,8 +549,6 @@
                 padding: 0 16px;
             }
 
-            &-row {}
-
             &-b1 {
                 &-item {
                     right: 21px;
@@ -566,8 +563,8 @@
                 left: 21px;
             }
 
-            &-search{
-                &-container{
+            &-search {
+                &-container {
                     padding: 0 21px;
                 }
             }
@@ -575,15 +572,8 @@
     }
 
     @media (max-width: 575px) {
-        .data {
-     
-        }
+        .data {}
     }
-
-
-    // @media (max-width: 280px) {
-    //     transform: scale(1);
-    // }
 }
 
 
@@ -603,6 +593,13 @@
 
     a {
         color: #0F2E33;
+    }
+
+
+    .menu-business-management-software-container {
+        ul {
+            max-width: 210px;
+        }
     }
 
     .data-widget {

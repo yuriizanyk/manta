@@ -7,7 +7,7 @@
             position: relative;
             left: -7px;
 
-            h2 {
+             > * {
                 color: $c-orange;
                 font-family: $f-moranga;
                 font-size: 50px;
@@ -130,7 +130,7 @@
             &-title {
                 left: 2px;
 
-                h2 {
+                 > * {
                     margin-bottom: 19px;
                 }
             }
@@ -286,5 +286,4 @@
             }
         }
     }
-
 }

@@ -28,7 +28,7 @@
         }
 
         &-title {
-            h2 {
+             > * {
                 font-family: $f-moranga;
                 color: #214752;
                 font-size: 50px;
@@ -171,7 +171,7 @@
                 position: relative;
                 left: 3px;
 
-                h2 {
+                 > * {
                     font-size: 32px;
                     line-height: 115%;
                     margin-bottom: 22px;

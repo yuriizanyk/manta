@@ -4,7 +4,7 @@
 
     .data {
         &-title {
-            h2 {
+             > * {
                 font-family: $f-moranga;
                 color: #214752;
                 font-size: 50px;
@@ -94,7 +94,7 @@
     @media (max-width: 1025px) {
         .data {
             &-title {
-                h2 {
+                 > * {
                     font-size: 38px;
                 }
             }
@@ -107,7 +107,7 @@
 
         .data {
             &-title {
-                h2 {
+                 > * {
                     font-size: 29.112px;
                     line-height: 31.441px;
                     max-width: 230px;
@@ -155,7 +155,7 @@
                 padding: 0 29px;
             }
             &-title {
-                h2 {
+                 > * {
                     left: -8px;
                 }
             }

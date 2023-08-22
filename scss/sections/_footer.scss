@@ -193,6 +193,7 @@
                     left: -52px;
 
                     .data-b1 {
+
                         &-text {
                             max-width: unset;
                             color: #F5F2F0;
@@ -242,6 +243,10 @@
                 font-weight: 400;
                 line-height: 115%;
                 margin-bottom: 15px;
+
+                &.mod-mobile {
+                    display: none;
+                }
             }
 
             &-a {
@@ -634,6 +639,16 @@
 
                     &:nth-child(3) {
                         display: none;
+                    }
+                }
+            }
+
+            &-b1 {
+                &-title {
+                    display: none;
+
+                    &.mod-mobile {
+                        display: block;
                     }
                 }
             }

@@ -32,7 +32,7 @@
         }
 
         &-title {
-            h2 {
+             > * {
                 color: #214752;
                 font-family: $f-moranga;
                 font-size: 83px;
@@ -82,7 +82,7 @@
 
         &-a {
             &-title {
-                h3 {
+                 > * {
                     color: #0F2E33;
                     font-family: $f-moranga;
                     font-size: 36.3px;
@@ -111,7 +111,7 @@
     @media (max-width: 1400px) {
         .data {
             &-title {
-                h2 {
+                 > * {
                     left: 0;
                     max-width: 1000px;
                     font-size: 63px;
@@ -135,7 +135,7 @@
             }
 
             &-title {
-                h2 {
+                 > * {
                     max-width: 710px;
                     font-size: 45px;
                     margin-bottom: 51px;
@@ -176,7 +176,7 @@
     @media (max-width: 767px) {
         .data {
             &-title {
-                h2 {
+                 > * {
                     font-size: 53.601px;
                     line-height: 115%;
                 }
@@ -211,7 +211,7 @@
             &-title {
                 left: 3px;
 
-                h2 {
+                 > * {
                     margin-bottom: 43px;
                 }
             }
@@ -235,7 +235,7 @@
 
             &-a {
                 &-title {
-                    h3 {
+                     > * {
                         line-height: 43.288px;
                         margin-right: -10px;
                         margin-bottom: 19px;

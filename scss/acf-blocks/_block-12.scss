@@ -30,7 +30,7 @@
             position: relative;
             left: -15px;
 
-            h2 {
+            > * {
                 font-family: $f-moranga;
                 font-size: 32px;
                 font-weight: 400;
@@ -129,7 +129,7 @@
             }
 
             &-title {
-                h3 {
+                > * {
                     color: #214752;
                     font-size: 22.026px;
                     font-weight: 700;
@@ -181,7 +181,7 @@
                 position: relative;
                 left: 0;
 
-                h2 {
+                > * {
                     color: #214752;
                     font-weight: 700;
                     line-height: 115%;
@@ -265,7 +265,7 @@
                     margin-left: -14px;
                 }
 
-                h2 {
+                > * {
                     margin-bottom: 0;
                 }
             }
@@ -336,7 +336,7 @@
                         &-title {
                             left: -12px;
 
-                            h3 {
+                            > * {
                                 margin-bottom: 6px;
                             }
                         }
@@ -357,7 +357,7 @@
                         &-title {
                             left: -4px;
 
-                            h3 {
+                            > * {
                                 margin-bottom: 9px;
                             }
                         }
