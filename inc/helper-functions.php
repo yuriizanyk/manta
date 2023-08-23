@@ -119,7 +119,7 @@ function wcl_acf_blocks_init() {
         function block_render_1($block, $content = '', $is_preview = false) {
             if ($is_preview) {
         ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_1.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_1.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -146,7 +146,7 @@ function wcl_acf_blocks_init() {
         function block_render_2($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_2.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_2.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -174,7 +174,7 @@ function wcl_acf_blocks_init() {
         function block_render_3($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_3.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_3.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -201,7 +201,7 @@ function wcl_acf_blocks_init() {
         function block_render_4($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_4.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_4.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -229,7 +229,7 @@ function wcl_acf_blocks_init() {
         function block_render_5($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_5.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_5.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -257,7 +257,7 @@ function wcl_acf_blocks_init() {
         function block_render_6($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_6.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_6.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -284,7 +284,7 @@ function wcl_acf_blocks_init() {
         function block_render_7($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_7.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_7.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -311,7 +311,7 @@ function wcl_acf_blocks_init() {
         function block_render_8($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_8.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_8.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -339,7 +339,7 @@ function wcl_acf_blocks_init() {
         function block_render_9($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_9.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_9.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -366,7 +366,7 @@ function wcl_acf_blocks_init() {
         function block_render_10($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_10.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_10.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -394,7 +394,7 @@ function wcl_acf_blocks_init() {
         function block_render_11($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_11.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_11.png'; ?>" alt="img">
             <?php
                 return;
             } else {
@@ -420,7 +420,7 @@ function wcl_acf_blocks_init() {
         function block_render_12($block, $content = '', $is_preview = false) {
             if ($is_preview) {
             ?>
-                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_12.png'; ?>" alt="img">
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_12.png'; ?>" alt="img">
             <?php
                 return;
             } else {
