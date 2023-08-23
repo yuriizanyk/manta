@@ -33,8 +33,7 @@ if (!empty($custom_color_picker) && $custom_color === true) {
                         <?php
                         $image          = get_sub_field('image');
                         $image          = wp_get_attachment_image($image, 'image-size-3');
-                        $title          = get_sub_field('title');
-                        $text           = get_sub_field('text');
+                        $title_and_text = get_sub_field('title_&_text');
                         $value_in_image = get_sub_field('value_in_image');
                         ?>
                         <div class="data-item">
@@ -53,15 +52,9 @@ if (!empty($custom_color_picker) && $custom_color === true) {
                                     </div>
                                 <?php endif; ?>
 
-                                <?php if (!empty($title)) : ?>
-                                    <div class="data-item-title">
-                                        <?php echo $title; ?>
-                                    </div>
-                                <?php endif; ?>
-
-                                <?php if (!empty($text)) : ?>
-                                    <div class="data-item-text">
-                                        <?php echo $text; ?>
+                                <?php if (!empty($title_and_text)) : ?>
+                                    <div class="data-item-head">
+                                        <?php echo $title_and_text; ?>
                                     </div>
                                 <?php endif; ?>
                             </div>

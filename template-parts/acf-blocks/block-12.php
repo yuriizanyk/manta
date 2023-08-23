@@ -1,27 +1,14 @@
 <?php
 
 
-$title = get_field('title');
-$text  = get_field('text');
+$title_and_text = get_field('title_&_text');
 ?>
 <!-- wcl-block-12 - Why Choose Manta? -->
 <div class="wcl-block-12">
     <div class="data-container wcl-container">
-        <?php if (!empty($title)) : ?>
-            <div class="data-title">
-                <div class="data-title-el"></div>
-
-                <div class="data-title-inner">
-                    <?php echo $title; ?>
-                </div>
-
-                <div class="data-title-el"></div>
-            </div>
-        <?php endif; ?>
-
-        <?php if (!empty($text)) : ?>
-            <div class="data-text">
-                <?php echo $text; ?>
+        <?php if (!empty($title_and_text)) : ?>
+            <div class="data-head">
+                <?php echo $title_and_text; ?>
             </div>
         <?php endif; ?>
 
@@ -30,9 +17,8 @@ $text  = get_field('text');
                 <div class="data-list">
                     <?php while (have_rows('list')) : the_row(); ?>
                         <?php
-                        $icon = get_sub_field('icon');
-                        $title = get_sub_field('title');
-                        $text = get_sub_field('text');
+                        $icon           = get_sub_field('icon');
+                        $title_and_text = get_sub_field('title_&_text');
                         ?>
                         <div class="data-item">
                             <div class="data-item-inner">
@@ -43,15 +29,9 @@ $text  = get_field('text');
                                 <?php endif; ?>
 
                                 <div class="data-item-a">
-                                    <?php if (!empty($title)) : ?>
-                                        <div class="data-item-title">
-                                            <?php echo $title; ?>
-                                        </div>
-                                    <?php endif; ?>
-
-                                    <?php if (!empty($text)) : ?>
-                                        <div class="data-item-text">
-                                            <?php echo $text; ?>
+                                    <?php if (!empty($title_and_text)) : ?>
+                                        <div class="data-item-head">
+                                            <?php echo $title_and_text; ?>
                                         </div>
                                     <?php endif; ?>
                                 </div>
