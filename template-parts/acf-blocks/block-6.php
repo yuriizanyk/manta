@@ -1,20 +1,13 @@
 <?php
 
-$title = get_field('title');
-$text  = get_field('text');
+$title_and_text = get_field('title_&_text');
 ?>
 <!-- wcl-block-6 - Manta Benefits -->
 <div class="wcl-block-6">
     <div class="data-container wcl-container">
-        <?php if (!empty($title)) : ?>
-            <div class="data-title">
-                <?php echo $title; ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if (!empty($text)) : ?>
-            <div class="data-text">
-                <?php echo $text; ?>
+        <?php if (!empty($title_and_text)) : ?>
+            <div class="data-head">
+                <?php echo $title_and_text; ?>
             </div>
         <?php endif; ?>
 

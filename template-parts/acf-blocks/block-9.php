@@ -2,8 +2,7 @@
 
 $title                = get_field('title');
 $group                = get_field('group');
-$group_title          = $group['title'];
-$group_text           = $group['text'];
+$group_title_and_text = $group['title_&_text'];
 $group_form_shortcode = $group['form_shortcode'];
 $image                = get_field('image');
 $image                = wp_get_attachment_image($image, 'image-size-7');
@@ -22,15 +21,9 @@ $image                = wp_get_attachment_image($image, 'image-size-7');
         <div class="data-row">
             <div class="data-col">
                 <div class="data-a">
-                    <?php if (!empty($group_title)) : ?>
-                        <div class="data-a-title">
-                            <?php echo $group_title; ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (!empty($group_text)) : ?>
-                        <div class="data-a-text">
-                            <?php echo $group_text; ?>
+                    <?php if (!empty($group_title_and_text)) : ?>
+                        <div class="data-a-head">
+                            <?php echo $group_title_and_text; ?>
                         </div>
                     <?php endif; ?>
                 </div>

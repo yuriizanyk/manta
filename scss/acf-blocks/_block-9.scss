@@ -81,8 +81,17 @@
         }
 
         &-a {
-            &-title {
-                 > * {
+            &-head {
+                color: #0F2E33;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                max-width: 578px;
+
+                .wcl-acf-heading-clear,
+                h1,
+                h2,
+                h3 {
                     color: #0F2E33;
                     font-family: $f-moranga;
                     font-size: 36.3px;
@@ -90,14 +99,6 @@
                     line-height: 50px;
                     margin-bottom: 29px;
                 }
-            }
-
-            &-text {
-                color: #0F2E33;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 22px;
-                max-width: 578px;
             }
         }
 
@@ -234,8 +235,12 @@
             }
 
             &-a {
-                &-title {
-                     > * {
+                &-head {
+
+                    .wcl-acf-heading-clear,
+                    h1,
+                    h2,
+                    h3 {
                         line-height: 43.288px;
                         margin-right: -10px;
                         margin-bottom: 19px;

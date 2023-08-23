@@ -1,12 +1,11 @@
 <?php
 
 
-$group = get_field('group');
-$title = $group['title'];
-$text  = $group['text'];
-$link  = $group['link'];
-$image = get_field('image');
-$image = wp_get_attachment_image($image, 'image-size-6');
+$group          = get_field('group');
+$title_and_text = $group['title_&_text'];
+$link           = $group['link'];
+$image          = get_field('image');
+$image          = wp_get_attachment_image($image, 'image-size-6');
 ?>
 <!-- wcl-block-8 - Award Winning Workplace -->
 <div class="wcl-block-8">
@@ -14,15 +13,9 @@ $image = wp_get_attachment_image($image, 'image-size-6');
         <div class="data-row">
             <div class="data-col">
                 <div class="data-b1">
-                    <?php if (!empty($title)) : ?>
-                        <div class="data-title">
-                            <?php echo $title; ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (!empty($text)) : ?>
-                        <div class="data-text">
-                            <?php echo $text; ?>
+                    <?php if (!empty($title_and_text)) : ?>
+                        <div class="data-head">
+                            <?php echo $title_and_text; ?>
                         </div>
                     <?php endif; ?>
 

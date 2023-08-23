@@ -1,20 +1,13 @@
 <?php
 
-$title = get_field('title');
-$text  = get_field('text');
+$title_and_text = get_field('title_&_text');
 ?>
 <!-- wcl-block-7 - Manta Services -->
 <div class="wcl-block-7">
     <div class="data-container wcl-container">
-        <?php if (!empty($title)) : ?>
-            <div class="data-title">
-                <?php echo $title; ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if (!empty($text)) : ?>
-            <div class="data-text">
-                <?php echo $text; ?>
+        <?php if (!empty($title_and_text)) : ?>
+            <div class="data-head">
+                <?php echo $title_and_text; ?>
             </div>
         <?php endif; ?>
 
@@ -22,9 +15,8 @@ $text  = get_field('text');
             <div class="data-list">
                 <?php while (have_rows('list')) : the_row(); ?>
                     <?php
-                    $icon  = get_sub_field('icon');
-                    $title = get_sub_field('title');
-                    $text  = get_sub_field('text');
+                    $icon           = get_sub_field('icon');
+                    $title_and_text = get_sub_field('title_&_text');
                     ?>
                     <div class="data-item">
                         <div class="data-item-inner">
@@ -34,9 +26,9 @@ $text  = get_field('text');
                                 </div>
                             <?php endif; ?>
 
-                            <?php if (!empty($title)) : ?>
-                                <div class="data-item-title">
-                                    <?php echo $title; ?>
+                            <?php if (!empty($title_and_text)) : ?>
+                                <div class="data-item-head">
+                                    <?php echo $title_and_text; ?>
                                 </div>
                             <?php endif; ?>
 
