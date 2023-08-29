@@ -18,6 +18,8 @@ $c-blue-dark: #214752;
 $f-red-hat-display: 'Red Hat Display', sans-serif;
 $f-abhaya-libre: 'Abhaya Libre', sans-serif;
 $f-moranga: 'Moranga', sans-serif;
+$f-timmana: 'Timmana', sans-serif;
+$f-abril-fatface: 'Abril Fatface', sans-serif;
 
 
 
@@ -25,6 +27,37 @@ $f-moranga: 'Moranga', sans-serif;
 /* 
 * 2. Fonts
 */
+
+
+
+@font-face {
+    font-family: 'Timmana';
+    src: url('../fonts/Timmana.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('../fonts/AbrilFatface-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+// Red Hat Display
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('../fonts/RedHatDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 @font-face {
@@ -35,6 +68,8 @@ $f-moranga: 'Moranga', sans-serif;
     font-display: swap;
 }
 
+
+
 @font-face {
     font-family: 'Red Hat Display';
     src: url('../fonts/RedHatDisplay-Bold.woff2') format('woff2');
@@ -42,6 +77,11 @@ $f-moranga: 'Moranga', sans-serif;
     font-style: normal;
     font-display: swap;
 }
+
+
+
+
+// Abhaya Libre
 
 @font-face {
     font-family: 'Abhaya Libre';
@@ -60,12 +100,24 @@ $f-moranga: 'Moranga', sans-serif;
 }
 
 @font-face {
-    font-family: 'Red Hat Display';
-    src: url('../fonts/RedHatDisplay-Regular.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'Abhaya Libre';
+    src: url('../fonts/AbhayaLibre-Bold.woff2') format('woff2');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Abhaya Libre';
+    src: url('../fonts/AbhayaLibre-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// Moranga
 
 @font-face {
     font-family: 'Moranga';

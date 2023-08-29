@@ -1,0 +1,56 @@
+.wcl-block-13 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .data {
+        &-list {}
+
+        &-item {
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-inner {
+                display: flex;
+            }
+
+            &-icon {
+                margin-right: 53px;
+                flex-shrink: 0;
+                width: 92px;
+                height: 92px;
+                flex-shrink: 0;
+                background-color: #F5F2F0;
+                border-radius: 184px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 67px;
+
+                    &.icon-block_13_chart {
+                        font-size: 60px;
+                    }
+
+                    &::before {
+                        color: $c-black-2;
+                    }
+                }
+            }
+
+            &-text {
+                h2 {
+                    color: #0F2E33;
+                    font-family: $f-red-hat-display;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 115%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

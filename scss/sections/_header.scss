@@ -158,32 +158,6 @@
                     border-radius: 5px;
                     font-size: 16px;
 
-                    &.mod-border {
-                        background-color: transparent;
-                        border-color: $c-orange;
-                        color: $c-orange;
-                        padding: 5px 9px;
-
-                        &:hover {
-                            color: $c-orange;
-                            background-color: $c-white;
-
-                            span {
-                                &::before {
-                                    color: $c-orange;
-                                }
-                            }
-                        }
-
-                        span {
-                            margin-left: 16px;
-
-                            &::before {
-                                color: $c-orange;
-                                transition: all 0.25s ease;
-                            }
-                        }
-                    }
 
                     &:hover {
                         color: $c-orange;

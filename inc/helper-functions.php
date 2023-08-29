@@ -48,9 +48,8 @@ function the_breadcrumb() {
 
     $separator = ' <span class="data-separator">/</span> ';
 
-    if (!is_front_page()) {
-
-        echo '<div class="wcl-breadcrumbs">';
+    echo '<div class="wcl-breadcrumbs">';
+    if (is_page() && !is_front_page()) {
         echo '<a href="';
         echo get_option('home');
         echo '">';
@@ -69,9 +68,37 @@ function the_breadcrumb() {
             ?>
         </span>
         <?php
+    } elseif (is_single()) {
+        // Get the post categories
+        $categories = get_the_category();
 
-        echo '</div>';
+        // Get the home URL
+        $home_url = home_url();
+
+        // Start building the breadcrumb trail
+        $breadcrumb = '<a href="' . $home_url . '">Home</a>';
+
+
+        $blog_page = get_option('page_for_posts'); // Assuming you have a page with the title "Blog"
+
+
+        if ($blog_page) {
+            $blog_page_link = get_permalink($blog_page);
+            $breadcrumb .= $separator . ' <a href="' . $blog_page_link . '">Blog</a>';
+        }
+
+        // If the post has categories, add them to the breadcrumb trail
+        if ($categories) {
+            $category = $categories[0]; // Assuming the post has only one category
+            $category_link = get_category_link($category->term_id);
+            $breadcrumb .= $separator . ' <a href="' . $category_link . '" class="data-current">' . $category->name . '</a>';
+        }
+
+        // Display the breadcrumb trail
+        echo $breadcrumb;
     }
+
+    echo '</div>';
 }
 
 
@@ -425,6 +452,62 @@ function wcl_acf_blocks_init() {
                 return;
             } else {
                 get_template_part('template-parts/acf-blocks/block-12');
+            }
+        }
+
+
+
+        acf_register_block_type(array(
+            'name'            => 'acf-block-13',
+            'title'           => __('Single Post - List'),
+            'description'     => __('Single Post - List Block'),
+            'render_template' => 'template-parts/acf-blocks/block-13.php',
+            'category'        => 'wcl-category',
+            'mode'            => 'edit',
+            'render_callback' => 'block_render_13',
+            'example'         => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                ),
+            ),
+        ));
+
+        function block_render_13($block, $content = '', $is_preview = false) {
+            if ($is_preview) {
+            ?>
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_13.png'; ?>" alt="img">
+            <?php
+                return;
+            } else {
+                get_template_part('template-parts/acf-blocks/block-13');
+            }
+        }
+
+
+
+        acf_register_block_type(array(
+            'name'            => 'acf-block-14',
+            'title'           => __('Single Post - Banner'),
+            'description'     => __('Single Post - Banner Block'),
+            'render_template' => 'template-parts/acf-blocks/block-14.php',
+            'category'        => 'wcl-category',
+            'mode'            => 'edit',
+            'render_callback' => 'block_render_14',
+            'example'         => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                ),
+            ),
+        ));
+
+        function block_render_14($block, $content = '', $is_preview = false) {
+            if ($is_preview) {
+            ?>
+                <img src="<?php echo get_stylesheet_directory_uri() . '/img/block_new_14.png'; ?>" alt="img">
+            <?php
+                return;
+            } else {
+                get_template_part('template-parts/acf-blocks/block-14');
             }
         }
     }

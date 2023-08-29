@@ -1,0 +1,48 @@
+.wcl-block-14 {
+    margin-top: 60px;
+    margin-bottom: 73px;
+
+    .data {
+        &-inner {
+            padding: 27px 29px 39px;
+            background-color: #214752;
+            position: relative;
+        }
+
+        &-logo {
+            max-width: 144px;
+            margin-bottom: 5px;
+            position: relative;
+            left: -13px;
+        }
+
+        &-row {
+            display: flex;
+            margin: 0 -18px;
+        }
+
+        &-col {
+            padding: 0 18px;
+
+            &:first-child {
+                width: 60%;
+            }
+
+            &:last-child {
+                width: 40%;
+            }
+        }
+
+        &-img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            max-width: calc(40% - 18px);
+
+            img {
+                max-height: 100%;
+            }
+        }
+    }
+}

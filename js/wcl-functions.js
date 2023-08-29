@@ -33,6 +33,31 @@ ready(() => {
 
 	/* SCRIPTS GO HERE */
 
+	// wcl-related-posts
+
+	if (document.querySelector('.wcl-related-posts')) {
+		let section = document.querySelector('.wcl-related-posts')
+		let slider = section.querySelector('.data-list')
+
+		let swiper = new Swiper(slider, {
+			slidesPerView: 3,
+			speed: 400,
+			spaceBetween: 68,
+			navigation: {
+				nextEl: section.querySelector('.data-list-nav-btn.mod-next'),
+				prevEl: section.querySelector('.data-list-nav-btn.mod-prev'),
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 'auto',
+					spaceBetween: 24,
+				},
+				1025: {
+				},
+			},
+		});
+	}
+
 
 	// wcl-block-10
 
