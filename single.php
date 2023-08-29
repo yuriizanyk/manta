@@ -14,6 +14,11 @@ $category = get_the_terms($post->ID, 'category');
 
 $social = get_field('social', 'option');
 ?>
+<div class="wcl-to-top wcl-button mod-border">
+    TO TOP
+    <span>>></span>
+</div>
+
 <div class="wcl-single-sc-1">
     <div class="data-container wcl-container">
         <div class="data-inner" style="background-image: url(<?php echo $image; ?>);">
@@ -75,28 +80,93 @@ $social = get_field('social', 'option');
                 </div>
             </div>
 
-            <div class="data-col">
-                <?php if (have_rows('social', 'option')) : ?>
-                    <div class="data-social">
-                        <?php while (have_rows('social', 'option')) : the_row(); ?>
-                            <?php
-                            $icon = get_sub_field('icon');
-                            $link = get_sub_field('link');
+            <?php
+            $social = get_field('social', 'option');
+            $social_new = [];
 
-                            if (str_contains((string)$icon, 'icon-youtube')) {
-                                continue;
-                            }
+            foreach ($social as $item) {
+                preg_match('/<span class="icon-([A-Za-z0-9]+)">/', $item['icon'],  $matches);
+                $class = $matches[1];
+                $social_new[$class] = $item;
+            }
+            ?>
+            <div class="data-col">
+                <?php if (!empty($social_new)) : ?>
+                    <div class="data-social">
+                        <?php if (!empty($social_new['tiktok'])) : ?>
+                            <?php
+                            $item = $social_new['tiktok'];
                             ?>
                             <div class="data-social-item">
-                                <?php if (!empty($link)) : ?>
-                                    <a href="<?php echo $link; ?>" class="data-social-item-link" target="_blank">
-                                        <?php if (!empty($icon)) : ?>
-                                            <?php echo $icon; ?>
+                                <?php if (!empty($item)) : ?>
+                                    <a href="<?php echo $item['link']; ?>" class="data-social-item-link" target="_blank">
+                                        <?php if (!empty($item['icon'])) : ?>
+                                            <?php echo $item['icon']; ?>
                                         <?php endif; ?>
                                     </a>
                                 <?php endif; ?>
                             </div>
-                        <?php endwhile; ?>
+                        <?php endif; ?>
+
+                        <?php if (!empty($social_new['twitter'])) : ?>
+                            <?php
+                            $item = $social_new['twitter'];
+                            ?>
+                            <div class="data-social-item">
+                                <?php if (!empty($item)) : ?>
+                                    <a href="<?php echo $item['link']; ?>" class="data-social-item-link" target="_blank">
+                                        <?php if (!empty($item['icon'])) : ?>
+                                            <?php echo $item['icon']; ?>
+                                        <?php endif; ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($social_new['linkedin'])) : ?>
+                            <?php
+                            $item = $social_new['linkedin'];
+                            ?>
+                            <div class="data-social-item">
+                                <?php if (!empty($item)) : ?>
+                                    <a href="<?php echo $item['link']; ?>" class="data-social-item-link" target="_blank">
+                                        <?php if (!empty($item['icon'])) : ?>
+                                            <?php echo $item['icon']; ?>
+                                        <?php endif; ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($social_new['facebook'])) : ?>
+                            <?php
+                            $item = $social_new['facebook'];
+                            ?>
+                            <div class="data-social-item">
+                                <?php if (!empty($item)) : ?>
+                                    <a href="<?php echo $item['link']; ?>" class="data-social-item-link" target="_blank">
+                                        <?php if (!empty($item['icon'])) : ?>
+                                            <?php echo $item['icon']; ?>
+                                        <?php endif; ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($social_new['instagram'])) : ?>
+                            <?php
+                            $item = $social_new['instagram'];
+                            ?>
+                            <div class="data-social-item">
+                                <?php if (!empty($item)) : ?>
+                                    <a href="<?php echo $item['link']; ?>" class="data-social-item-link" target="_blank">
+                                        <?php if (!empty($item['icon'])) : ?>
+                                            <?php echo $item['icon']; ?>
+                                        <?php endif; ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
 
@@ -110,51 +180,51 @@ $social = get_field('social', 'option');
                             </button>
                         </form>
                     </div>
-                </div>
 
-                <div class="data-widget">
-                    <div class="data-widget-1">
-                        <div class="data-widget-1-inner">
-                            <div class="data-widget-1-title">
-                                What it is
-                            </div>
-
-                            <div class="data-widget-1-list">
-                                <div class="data-widget-1-item">
-                                    Pros & Cons
+                    <div class="data-widget">
+                        <div class="data-widget-1">
+                            <div class="data-widget-1-inner">
+                                <div class="data-widget-1-title">
+                                    What it is
                                 </div>
 
-                                <div class="data-widget-1-item">
-                                    How Much it Costs
-                                </div>
+                                <div class="data-widget-1-list">
+                                    <div class="data-widget-1-item">
+                                        Pros & Cons
+                                    </div>
 
-                                <div class="data-widget-1-item">
-                                    Whether it’s worth it
-                                </div>
+                                    <div class="data-widget-1-item">
+                                        How Much it Costs
+                                    </div>
 
-                                <div class="data-widget-1-item">
-                                    Whether it’s worth it
+                                    <div class="data-widget-1-item">
+                                        Whether it’s worth it
+                                    </div>
+
+                                    <div class="data-widget-1-item">
+                                        Whether it’s worth it
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="data-widget">
-                    <div class="data-widget-2">
-                        <div class="data-widget-2-title">
-                            Get a free SEO audit
-                        </div>
+                    <div class="data-widget">
+                        <div class="data-widget-2">
+                            <div class="data-widget-2-title">
+                                Get a free SEO audit
+                            </div>
 
-                        <div class="data-widget-2-form">
-                            <input type="text" placeholder="Your Site URL">
-                            <input type="submit" value="See Report">
+                            <div class="data-widget-2-form">
+                                <input type="text" placeholder="Your Site URL">
+                                <input type="submit" value="See Report">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="data-widget">
-                    <?php get_template_part('template-parts/acf-blocks/related-posts'); ?>
+                    <div class="data-widget">
+                        <?php get_template_part('template-parts/acf-blocks/related-posts'); ?>
+                    </div>
                 </div>
             </div>
         </div>

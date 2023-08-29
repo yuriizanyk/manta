@@ -33,6 +33,33 @@ ready(() => {
 
 	/* SCRIPTS GO HERE */
 
+
+	// wcl-to-top
+
+	if (document.querySelector('.wcl-to-top')) {
+		let section = document.querySelector('.wcl-to-top')
+		let scrolled = window.scrollY
+
+		if (scrolled >= 1500) {
+			section.classList.add('active')
+		}
+		
+		window.addEventListener('scroll', function (e) {
+			scrolled = window.scrollY
+			if (scrolled >= 1300) {
+				section.classList.add('active')
+			} else {
+				section.classList.remove('active')
+			}
+		});
+
+		section.addEventListener('click', function (e) {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		})
+	}
+
+
+
 	// wcl-related-posts
 
 	if (document.querySelector('.wcl-related-posts')) {

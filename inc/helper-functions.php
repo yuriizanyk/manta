@@ -81,7 +81,6 @@ function the_breadcrumb() {
 
         $blog_page = get_option('page_for_posts'); // Assuming you have a page with the title "Blog"
 
-
         if ($blog_page) {
             $blog_page_link = get_permalink($blog_page);
             $breadcrumb .= $separator . ' <a href="' . $blog_page_link . '">Blog</a>';

@@ -1,12 +1,12 @@
 .wcl-block-13 {
-    margin-top: 50px;
+    margin-top: 85px;
     margin-bottom: 50px;
+    position: relative;
+    left: 5px;
 
     .data {
-        &-list {}
-
         &-item {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
 
             &:last-child {
                 margin-bottom: 0;
@@ -29,10 +29,10 @@
                 align-items: center;
 
                 span {
-                    font-size: 67px;
+                    font-size: 72px;
 
                     &.icon-block_13_chart {
-                        font-size: 60px;
+                        font-size: 66px;
                     }
 
                     &::before {
@@ -42,6 +42,8 @@
             }
 
             &-text {
+                max-width: 620px;
+
                 h2 {
                     color: #0F2E33;
                     font-family: $f-red-hat-display;

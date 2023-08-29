@@ -14,25 +14,25 @@ $image_text = wp_get_attachment_image($image_text, 'full');
 ?>
 <!-- wcl-block-14 - Single Post - Banner -->
 <div class="wcl-block-14">
-    <div class="data-inner">
-        <div class="data-row">
-            <div class="data-col">
+    <div class="b14-inner">
+        <div class="b14-row">
+            <div class="b14-col">
                 <?php if (!empty($logo)) : ?>
-                    <div class="data-logo">
+                    <div class="b14-logo">
                         <?php echo $logo; ?>
                     </div>
                 <?php endif; ?>
 
                 <?php if (!empty($image_text)) : ?>
-                    <div class="data-img-text">
+                    <div class="b14-img-text">
                         <?php echo $image_text; ?>
                     </div>
                 <?php endif; ?>
             </div>
 
-            <div class="data-col">
+            <div class="b14-col">
                 <?php if (!empty($image)) : ?>
-                    <div class="data-img">
+                    <div class="b14-img">
                         <?php echo $image; ?>
                     </div>
                 <?php endif; ?>

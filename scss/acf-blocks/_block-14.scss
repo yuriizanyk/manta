@@ -1,12 +1,14 @@
 .wcl-block-14 {
     margin-top: 60px;
-    margin-bottom: 73px;
+    margin-bottom: 75px;
+    max-width: 768px;
 
-    .data {
+    .b14 {
         &-inner {
             padding: 27px 29px 39px;
             background-color: #214752;
             position: relative;
+            min-height: 153px;
         }
 
         &-logo {
@@ -23,24 +25,26 @@
 
         &-col {
             padding: 0 18px;
+            width: 100%;
 
             &:first-child {
-                width: 60%;
+                max-width: calc(100% - 268px);
             }
 
             &:last-child {
-                width: 40%;
+                max-width: 268px;
             }
         }
 
         &-img {
             position: absolute;
-            right: 0;
+            right: 21px;
             top: 0;
             height: 100%;
             max-width: calc(40% - 18px);
 
             img {
+                width: auto;
                 max-height: 100%;
             }
         }

@@ -27,30 +27,27 @@ wcl-button
     }
 
     &.mod-border {
-        &.mod-border {
-            background-color: transparent;
-            border-color: $c-orange;
+        background-color: transparent;
+        border-color: $c-orange;
+        color: $c-orange;
+
+        &:hover {
             color: $c-orange;
-            padding: 5px 9px;
-
-            &:hover {
-                color: $c-orange;
-                background-color: $c-white;
-
-                span {
-                    &::before {
-                        color: $c-orange;
-                    }
-                }
-            }
+            background-color: $c-white;
 
             span {
-                margin-left: 16px;
-
                 &::before {
                     color: $c-orange;
-                    transition: all 0.25s ease;
                 }
+            }
+        }
+
+        span {
+            margin-left: 16px;
+
+            &::before {
+                color: $c-orange;
+                transition: all 0.25s ease;
             }
         }
     }
