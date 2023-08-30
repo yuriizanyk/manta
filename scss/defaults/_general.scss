@@ -39,7 +39,19 @@ p:last-child {
 input,
 textarea {
     border-radius: 0; // Prevent IOS add border-radius by default to all input elements
+
+    &::placeholder {
+        opacity: 1;
+        transition: 0.2s ease;
+    }
+
+    &:focus {
+        &::placeholder {
+            opacity: 0 !important;
+        }
+    }
 }
+
 
 a {
     -webkit-transition: all .25s ease;

@@ -84,7 +84,7 @@ $social = get_field('social', 'option');
             $social = get_field('social', 'option');
             $social_new = [];
 
-            foreach ($social as $item) {
+            foreach ((array)$social as $item) {
                 preg_match('/<span class="icon-([A-Za-z0-9]+)">/', $item['icon'],  $matches);
                 $class = $matches[1];
                 $social_new[$class] = $item;
@@ -171,60 +171,10 @@ $social = get_field('social', 'option');
                 <?php endif; ?>
 
                 <div class="data-sidebar">
-                    <div class="data-widget">
-                        <form class="data-search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-                            <input type="text" name="s" placeholder="I’m Looking for..." value="<?php echo esc_attr(get_search_query()); ?>" required>
-
-                            <button type="submit">
-                                <img src="<?php echo get_stylesheet_directory_uri() . '/img/search-2.svg'; ?>" alt="img">
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="data-widget">
-                        <div class="data-widget-1">
-                            <div class="data-widget-1-inner">
-                                <div class="data-widget-1-title">
-                                    What it is
-                                </div>
-
-                                <div class="data-widget-1-list">
-                                    <div class="data-widget-1-item">
-                                        Pros & Cons
-                                    </div>
-
-                                    <div class="data-widget-1-item">
-                                        How Much it Costs
-                                    </div>
-
-                                    <div class="data-widget-1-item">
-                                        Whether it’s worth it
-                                    </div>
-
-                                    <div class="data-widget-1-item">
-                                        Whether it’s worth it
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="data-widget">
-                        <div class="data-widget-2">
-                            <div class="data-widget-2-title">
-                                Get a free SEO audit
-                            </div>
-
-                            <div class="data-widget-2-form">
-                                <input type="text" placeholder="Your Site URL">
-                                <input type="submit" value="See Report">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="data-widget">
-                        <?php get_template_part('template-parts/acf-blocks/related-posts'); ?>
-                    </div>
+                    <?php if (is_active_sidebar('single-post-sidebar')) : ?>
+                        <?php dynamic_sidebar('single-post-sidebar'); 
+                        ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

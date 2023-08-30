@@ -316,6 +316,14 @@ add_filter('acf/validate_post_id', __NAMESPACE__ . '\wcl_fix_acf_field_post_id_o
 
 function register_my_widgets() {
 
+	register_sidebar(array(
+		'name'          => 'Single Post Sidebar',
+		'id'            => 'single-post-sidebar',
+		'before_widget' => '<div class="data-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="data-widget-title">',
+		'after_title'   => '</h3>',
+	));
 
 	register_sidebar(array(
 		'name'          => 'Services Sidebar',
@@ -367,5 +375,10 @@ function register_my_widgets() {
 add_action('widgets_init', 'register_my_widgets');
 
 
+
+
+
+require_once get_theme_file_path('/inc/acf-blocks.php');
+require_once get_theme_file_path('/inc/widgets.php');
 require_once get_theme_file_path('/inc/helper-functions.php');
 require_once get_theme_file_path('/inc/ajax-requests.php');
