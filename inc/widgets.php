@@ -84,42 +84,20 @@ class Wcl_Widget_Table_of_Content extends WP_Widget {
         );
     }
 
-
     // Widget Output
     public function widget($args, $instance) {
         // var_dump($this->id );
-        $widget_title = !empty($instance['title']) ? apply_filters('widget_title', $instance['title']) : '';
+        // $widget_title = !empty($instance['title']) ? apply_filters('widget_title', $instance['title']) : '';
 
         echo $args['before_widget'];
 
         $args_new =  array(
             'widget_id' => $this->id,
-            'widget_title' => $widget_title,
         );
 
         get_template_part('template-parts/widget/table-of-content', null, $args_new);
-        
+
         echo $args['after_widget'];
-    }
-
-
-    // Widget Form
-    public function form($instance) {
-        $title = !empty($instance['title']) ? $instance['title'] : '';
-?>
-        <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>">Title:</label>
-            <input class="widefat" type="text" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($title); ?>">
-        </p>
-<?php
-    }
-
-
-    // Update Widget Settings
-    public function update($new_instance, $old_instance) {
-        $instance = array();
-        $instance['title'] = !empty($new_instance['title']) ? sanitize_text_field($new_instance['title']) : '';
-        return $instance;
     }
 }
 

@@ -1,13 +1,14 @@
 <?php
 
 $widget_id = $args['widget_id'];
-$widget_title = $args['widget_title'];
+$title = get_field('title', 'widget_' . $widget_id);
+//var_dump(get_field('list', 'widget_' . $widget_id));
 ?>
 <div class="wcl-wdg3-table-of-content">
     <div class="wdg3-inner">
-        <?php if (!empty($widget_title)) : ?>
+        <?php if (!empty($title)) : ?>
             <div class="wdg3-title">
-                <?php echo $widget_title; ?>
+                <?php echo $title; ?>
             </div>
         <?php endif; ?>
 
