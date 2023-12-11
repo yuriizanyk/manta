@@ -5,7 +5,7 @@
  * Template Name: Contact Page
  */
 
-wcl_create_new_xml_by_url_rss_feed();
+//wcl_create_new_xml_by_url_rss_feed();
 
 
 get_header();
