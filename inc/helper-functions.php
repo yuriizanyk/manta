@@ -180,7 +180,7 @@ class wcl_Walker_Nav_Menu extends Walker_Nav_Menu {
 
         if (in_array($item->ID, $menuIds)) {
             ob_start();
-            ?>
+        ?>
             <div class="wcl-mega-menu">
                 <?php if (MENU_ITEMS['services'] == $item->ID) : ?>
                     <?php if (is_active_sidebar('services-sidebar')) : ?>
@@ -298,3 +298,68 @@ add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
 
 
 
+
+
+/* 
+wcl_create_new_xml_by_url_rss_feed
+ */
+function wcl_create_new_xml_by_url_rss_feed($url = '') {
+    if (empty($url)) {
+        $url = 'https://www.medischevakhandel.nl/nl/huisarts-vandaag-feed';
+    }
+
+    $xml = file_get_contents($url);
+
+    if ($xml !== false) {
+        $dom = new DOMDocument();
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($xml);
+
+        $xpath = new DOMXPath($dom);
+        $xpath->registerNamespace('media', 'http://search.yahoo.com/mrss/');
+
+        // Find and remove the 'width' attribute from 'media:content' tags within 'item' elements
+        $items = $xpath->query('//channel/item/media:content');
+        foreach ($items as $item) {
+            $item->removeAttribute('width');
+        }
+
+        $directory = get_template_directory() . '/xml-feeds/';
+
+        // Проверка существования директории и создание, если она не существует
+        if (!file_exists($directory)) {
+            mkdir($directory, 0777, true);
+        }
+
+        // Save the modified XML content to a file
+        $dom->save(get_template_directory() . '/xml-feeds/new-rss-feed.xml');
+        //echo "Modified XML file saved successfully.";
+    } else {
+        //echo "Failed to fetch the XML content.";
+    }
+}
+
+//wcl_create_new_xml_by_url_rss_feed();
+
+
+
+
+/* 
+wcl_new_rss_feed_markup
+ */
+function wcl_new_rss_feed_markup() {
+    // Чтение содержимого файла modified_channel.xml
+    $file_path = get_template_directory() . '/xml-feeds/new-rss-feed.xml';
+
+    header('Content-Type: application/xml');
+
+    if (file_exists($file_path)) {
+        $file_content = file_get_contents($file_path);
+        echo $file_content;
+    }
+}
+
+add_action('init', function () {
+    add_feed('new-rss-feed', 'wcl_new_rss_feed_markup');
+});
