@@ -4,7 +4,12 @@ $logo = get_field('footer_logo', 'option');
 $logo = wp_get_attachment_image($logo, 'full');
 
 $social = get_field('social', 'option');
+
+
 ?>
+
+<?php get_template_part('template-parts/popup-1'); ?>
+
 <footer id="wcl-main-footer" class="wcl-footer">
 	<div class="data-container wcl-container">
 		<div class="data-row">
