@@ -363,3 +363,111 @@ function wcl_new_rss_feed_markup() {
 add_action('init', function () {
     add_feed('new-rss-feed', 'wcl_new_rss_feed_markup');
 });
+
+
+
+
+// Функция для создания cron job
+function schedule_wcl_create_new_xml() {
+    if (!wp_next_scheduled('wcl_create_new_xml_event')) {
+        // Запуск функции каждые 12 часов
+        wp_schedule_event(time(), 'twicedaily', 'wcl_create_new_xml_event');
+    }
+}
+
+add_action('wcl_create_new_xml_event', 'wcl_create_new_xml_by_url_rss_feed');
+
+
+
+
+
+
+
+/* 
+wcl_create_new_xml_by_url_rss_feed_by_2_product
+ */
+function wcl_create_new_xml_by_url_rss_feed_by_2_product($rss_url = '') {
+    if (empty($rss_url)) {
+        $rss_url = 'https://www.medischevakhandel.nl/nl/huisarts-vandaag-feed';
+    }
+
+    $rss_feed = file_get_contents($rss_url);
+    $rss = simplexml_load_string($rss_feed);
+
+    $output_folder = get_template_directory() . '/xml-feeds/';
+
+    if (!file_exists($output_folder)) {
+        mkdir($output_folder, 0777, true);
+    }
+
+    $items_per_file = 2;
+    $total_items = count($rss->channel->item);
+    $file_count = ceil($total_items / $items_per_file);
+    $item_count = 0;
+
+    for ($i = 1; $i <= $file_count; $i++) {
+        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel></channel></rss>');
+
+        for ($j = 0; $j < $items_per_file && $item_count < $total_items; $j++) {
+            $item = $xml->channel->addChild('item');
+            $item->addChild('title', htmlspecialchars('<![CDATA[' . $rss->channel->item[$item_count]->title . ']]>'));
+            $item->addChild('description', htmlspecialchars($rss->channel->item[$item_count]->description));
+            $item->addChild('link', htmlspecialchars($rss->channel->item[$item_count]->link));
+
+            // Adding media:content element
+            $media_content = $item->addChild('media');
+            $media_content->addAttribute('url', htmlspecialchars($rss->channel->item[$item_count]->children('media', true)->content->attributes()->url));
+            $media_content->addAttribute('type', htmlspecialchars($rss->channel->item[$item_count]->children('media', true)->content->attributes()->type));
+
+            $item_count++;
+        }
+
+        $output_file = $output_folder . 'email-products-' . $i . '.xml';
+        $xml->asXML($output_file);
+    }
+
+    //echo 'RSS feed был разделен на ' . $file_count . ' файл(ов) XML в папке "' . $output_folder . '".';
+}
+
+
+
+
+/* 
+wcl_rss_feeds_by_2_item
+ */
+function wcl_rss_feeds_by_2_item() {
+    // Получаем путь к папке темы текущего сайта
+    $theme_path = get_template_directory();
+
+    // Путь к папке с XML-файлами внутри темы
+    $xml_feeds_path = $theme_path . '/xml-feeds';
+
+    // Проверяем существование папки
+    if (file_exists($xml_feeds_path) && is_dir($xml_feeds_path)) {
+        // Подсчитываем количество файлов с шаблоном "feed-" и расширением ".xml" в папке xml-feeds
+        $file_count = count(glob($xml_feeds_path . '/email-products-*.xml'));
+    }
+
+    for ($i = 0; $i < $file_count; $i++) {
+        $file_path = get_template_directory() . '/xml-feeds/email-products-' . $i . '.xml';
+        
+        add_feed('email-products-' . $i, function () use ($i, $file_path) {
+            header('Content-Type: application/xml');
+            
+            if (file_exists($file_path)) {
+                $file_content = file_get_contents($file_path);
+                echo $file_content;
+            }
+        });
+    }
+
+    $option = get_option('wcl_new_rss_feed_by_2_product_markup_2');
+
+    if (empty($option)) {
+        flush_rewrite_rules();
+        update_option('wcl_new_rss_feed_by_2_product_markup_2', 1);
+    }
+}
+
+add_action('init', 'wcl_rss_feeds_by_2_item');
+
